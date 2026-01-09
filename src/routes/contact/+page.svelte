@@ -1,0 +1,120 @@
+<div class="contact-page">
+    <section class="page-intro bg-neutral">
+        <div class="container text-center">
+            <h1>Let's Start Growing</h1>
+            <p class="large-text">Have a system in mind or a brand that needs a fresh start? Let's talk about how we can forge it together.</p>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="container contact-grid">
+            <div class="contact-form">
+                <h3 class="mb-4">Send a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="e.g. John Doe" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Project Type</label>
+                        <select id="type">
+                            <option>Select Option</option>
+                            <option>Business Website</option>
+                            <option>Web App / Internal Tool</option>
+                            <option>Brand Identity</option>
+                            <option>Digital Marketing</option>
+                            <option>Something Else</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary w-full" style="width: 100%">Send Inquiry</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-block mb-6">
+                    <h3>Book a Call</h3>
+                    <p class="mb-3">Schedule a 30-minute discovery call to discuss your project.</p>
+                    <a href="#" class="btn btn-outline" style="width: 100%">Open Calendar</a>
+                </div>
+
+                <div class="info-block">
+                    <h3>Direct Contact</h3>
+                    <p>Email: <a href="mailto:hello@strataforge.com">hello@strataforge.com</a></p>
+                    <p>Location: Lusaka, Zambia (Remote-first)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .page-intro {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .page-intro h1 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+    }
+
+    .large-text {
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    @media (min-width: 992px) {
+        .contact-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .contact-form {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background: var(--color-secondary);
+        font-family: inherit;
+    }
+
+    .form-group textarea {
+        height: 120px;
+    }
+</style>
