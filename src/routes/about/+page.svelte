@@ -2,7 +2,10 @@
     <section class="page-intro bg-neutral">
         <div class="container text-center">
             <h1>About Strata Forge</h1>
-            <p class="large-text">A dev-and-design-first company based in Lusaka, Zambia. We build the digital backbone for modern businesses.</p>
+            <p class="large-text">
+                A dev-and-design-first company based in Lusaka, Zambia. We build
+                the digital backbone for modern businesses.
+            </p>
         </div>
     </section>
 
@@ -10,10 +13,24 @@
         <div class="container story-grid">
             <div>
                 <h2 class="mb-3">Where we started</h2>
-                <p>Born from the intersection of technology and creativity, Strata Forge was created to bridge the gap between complex software engineering and high-end brand design.</p>
-                <p class="mt-2">We believe systems should be human, and design should be functional. Our remote-first approach allows us to serve clients across the region with agility and precision.</p>
+                <p>
+                    Born from the intersection of technology and creativity,
+                    Strata Forge was created to bridge the gap between complex
+                    software engineering and high-end brand design.
+                </p>
+                <p class="mt-2">
+                    We believe systems should be human, and design should be
+                    functional. Our remote-first approach allows us to serve
+                    clients across the region with agility and precision.
+                </p>
             </div>
-            <div class="bg-neutral" style="height: 300px; border-radius: 24px"></div>
+            <div class="story-visual">
+                <img
+                    src="/images/about_visual.png"
+                    alt="Strata Forge Workspace"
+                    class="story-image"
+                />
+            </div>
         </div>
     </section>
 
@@ -23,8 +40,16 @@
             <div class="founder-card">
                 <div class="avatar"></div>
                 <h3>Innocent Manda</h3>
-                <p class="text-primary" style="color: var(--color-primary); font-weight: 600">Founder & Backend Architect</p>
-                <p class="small mt-2" style="font-size: 0.85rem">Development, Design, and Strategy lead for Zambian and regional projects.</p>
+                <p
+                    class="text-primary"
+                    style="color: var(--color-primary); font-weight: 600"
+                >
+                    Founder & Backend Architect
+                </p>
+                <p class="small mt-2" style="font-size: 0.85rem">
+                    Development, Design, and Strategy lead for Zambian and
+                    regional projects.
+                </p>
             </div>
         </div>
     </section>
@@ -76,5 +101,17 @@
         background: var(--color-secondary);
         border-radius: 50%;
         margin-bottom: 24px;
+    }
+
+    .story-visual {
+        border-radius: 24px;
+        overflow: hidden;
+        height: 300px;
+    }
+
+    .story-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 </style>

@@ -1,3 +1,15 @@
+<script>
+    import {
+        Cpu,
+        Palette,
+        TrendingUp,
+        Globe,
+        Layout,
+        PencilRuler,
+        Megaphone,
+    } from "lucide-svelte";
+</script>
+
 <div class="home-page">
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -5,21 +17,25 @@
             <div class="hero-text">
                 <h1>We build your systems and brand, then help them grow.</h1>
                 <p class="subtext">
-                    Scalable websites, custom apps, and premium brand identities forged for Zambian SMEs and growing regional brands—then amplified with data-driven marketing.
+                    Scalable websites, custom apps, and premium brand identities
+                    forged for Zambian SMEs and growing regional brands—then
+                    amplified with data-driven marketing.
                 </p>
                 <div class="hero-ctas">
-                    <a href="/contact" class="btn btn-primary">Book a Discovery Call</a>
-                    <a href="/services" class="btn btn-outline">View Services</a>
+                    <a href="/contact" class="btn btn-primary"
+                        >Book a Discovery Call</a
+                    >
+                    <a href="/services" class="btn btn-outline">View Services</a
+                    >
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="visual-mockup">
-                    <!-- This would be an illustration or image -->
-                    <div class="mockup-dashboard">
-                        <div class="bar"></div>
-                        <div class="bar small"></div>
-                        <div class="circle"></div>
-                    </div>
+                    <img
+                        src="/images/hero_visual.png"
+                        alt="Modern Dashboard"
+                        class="hero-image"
+                    />
                 </div>
             </div>
         </div>
@@ -28,7 +44,9 @@
     <!-- Who We Help Stripe -->
     <section class="who-we-help bg-neutral">
         <div class="container">
-            <h2 class="section-title text-center mb-4">Empowering the engines of Zambia's economy.</h2>
+            <h2 class="section-title text-center mb-4">
+                Empowering the engines of Zambia's economy.
+            </h2>
             <div class="help-grid">
                 <div class="help-item">
                     <span>SMEs & Growing Businesses</span>
@@ -50,23 +68,45 @@
     <section id="pillars" class="pillars">
         <div class="container">
             <div class="text-center mb-6">
-                <h2 class="section-title">Built in layers. Forged for growth.</h2>
-                <p class="section-subtitle">A holistic approach to digital excellence.</p>
+                <h2 class="section-title">
+                    Built in layers. Forged for growth.
+                </h2>
+                <p class="section-subtitle">
+                    A holistic approach to digital excellence.
+                </p>
             </div>
             <div class="pillars-grid">
                 <div class="pillar-card">
+                    <div class="icon-wrapper">
+                        <Cpu size={32} />
+                    </div>
                     <h3>Systems & Development</h3>
-                    <p>Custom-coded tools and websites built on secure, scalable architecture.</p>
+                    <p>
+                        Custom-coded tools and websites built on secure,
+                        scalable architecture.
+                    </p>
                     <a href="/services#systems-dev">Learn more →</a>
                 </div>
                 <div class="pillar-card">
+                    <div class="icon-wrapper">
+                        <Palette size={32} />
+                    </div>
                     <h3>Brand & Design</h3>
-                    <p>Strategic visual identities that turn first impressions into lasting trust.</p>
+                    <p>
+                        Strategic visual identities that turn first impressions
+                        into lasting trust.
+                    </p>
                     <a href="/services#brand-design">Learn more →</a>
                 </div>
                 <div class="pillar-card">
+                    <div class="icon-wrapper">
+                        <TrendingUp size={32} />
+                    </div>
                     <h3>Digital Growth</h3>
-                    <p>Targeted campaigns designed to turn traffic into measurable leads and sales.</p>
+                    <p>
+                        Targeted campaigns designed to turn traffic into
+                        measurable leads and sales.
+                    </p>
                     <a href="/services#marketing-growth">Learn more →</a>
                 </div>
             </div>
@@ -78,20 +118,39 @@
         <div class="container">
             <div class="grid-2">
                 <div class="service-card">
+                    <div class="icon-wrapper mb-3">
+                        <Globe size={24} />
+                    </div>
                     <h4>Business Websites</h4>
-                    <p>High-performance, mobile-first windows to your business.</p>
+                    <p>
+                        High-performance, mobile-first windows to your business.
+                    </p>
                 </div>
                 <div class="service-card">
+                    <div class="icon-wrapper mb-3">
+                        <Layout size={24} />
+                    </div>
                     <h4>Web Apps & Tools</h4>
-                    <p>Custom software built to solve unique operational bottlenecks.</p>
+                    <p>
+                        Custom software built to solve unique operational
+                        bottlenecks.
+                    </p>
                 </div>
                 <div class="service-card">
+                    <div class="icon-wrapper mb-3">
+                        <PencilRuler size={24} />
+                    </div>
                     <h4>UI/UX Design</h4>
                     <p>Human-centered design that prioritizes your users.</p>
                 </div>
                 <div class="service-card">
+                    <div class="icon-wrapper mb-3">
+                        <Megaphone size={24} />
+                    </div>
                     <h4>Paid Campaigns</h4>
-                    <p>Strategic growth through Meta, Google, and TikTok ads.</p>
+                    <p>
+                        Strategic growth through Meta, Google, and TikTok ads.
+                    </p>
                 </div>
             </div>
         </div>
@@ -101,10 +160,17 @@
     <section id="final-cta" class="final-cta text-center">
         <div class="container">
             <h2>Let’s build something that actually scales.</h2>
-            <p class="mb-4">Ready to move from manual chaos to digital clarity? Let's map your project together.</p>
+            <p class="mb-4">
+                Ready to move from manual chaos to digital clarity? Let's map
+                your project together.
+            </p>
             <div class="hero-ctas">
-                <a href="/contact" class="btn btn-primary">Book a Discovery Call</a>
-                <a href="https://wa.me/260..." class="btn btn-outline">Send us a WhatsApp</a>
+                <a href="/contact" class="btn btn-primary"
+                    >Book a Discovery Call</a
+                >
+                <a href="https://wa.me/260..." class="btn btn-outline"
+                    >Send us a WhatsApp</a
+                >
             </div>
         </div>
     </section>
@@ -180,9 +246,7 @@
     }
 
     .visual-mockup {
-        background: var(--color-secondary);
         border-radius: 24px;
-        height: 300px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -191,41 +255,22 @@
         position: relative;
     }
 
-    @media (min-width: 768px) {
-        .visual-mockup {
-            height: 400px;
-        }
-    }
-
-    .mockup-dashboard {
-        width: 80%;
-        height: 60%;
-        background: white;
-        border-radius: 12px;
-        padding: 24px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .bar {
-        height: 20px;
-        background: var(--color-secondary);
-        border-radius: 4px;
+    .hero-image {
         width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 24px;
     }
 
-    .bar.small {
-        width: 60%;
+    .icon-wrapper {
+        color: var(--color-primary);
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
     }
 
-    .circle {
-        width: 40px;
-        height: 40px;
-        background: var(--color-primary);
-        border-radius: 50%;
-        margin-top: auto;
+    .mb-3 {
+        margin-bottom: 12px;
     }
 
     /* Who We Help */

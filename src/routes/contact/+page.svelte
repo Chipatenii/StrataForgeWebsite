@@ -1,8 +1,15 @@
+<script>
+    import { Phone, Mail, MapPin } from "lucide-svelte";
+</script>
+
 <div class="contact-page">
     <section class="page-intro bg-neutral">
         <div class="container text-center">
             <h1>Let's Start Growing</h1>
-            <p class="large-text">Have a system in mind or a brand that needs a fresh start? Let's talk about how we can forge it together.</p>
+            <p class="large-text">
+                Have a system in mind or a brand that needs a fresh start? Let's
+                talk about how we can forge it together.
+            </p>
         </div>
     </section>
 
@@ -13,11 +20,19 @@
                 <form>
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="e.g. John Doe" />
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="e.g. John Doe"
+                        />
                     </div>
                     <div class="form-group">
                         <label for="email">Business Email</label>
-                        <input type="email" id="email" placeholder="john@example.com" />
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="john@example.com"
+                        />
                     </div>
                     <div class="form-group">
                         <label for="type">Project Type</label>
@@ -32,23 +47,51 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" placeholder="Tell us about your project..."></textarea>
+                        <textarea
+                            id="message"
+                            placeholder="Tell us about your project..."
+                        ></textarea>
                     </div>
-                    <button type="button" class="btn btn-primary w-full" style="width: 100%">Send Inquiry</button>
+                    <button
+                        type="button"
+                        class="btn btn-primary w-full"
+                        style="width: 100%">Send Inquiry</button
+                    >
                 </form>
             </div>
 
             <div class="contact-info">
                 <div class="info-block mb-6">
                     <h3>Book a Call</h3>
-                    <p class="mb-3">Schedule a 30-minute discovery call to discuss your project.</p>
-                    <a href="#" class="btn btn-outline" style="width: 100%">Open Calendar</a>
+                    <p class="mb-3">
+                        Schedule a 30-minute discovery call to discuss your
+                        project.
+                    </p>
+                    <a
+                        href="javascript:void(0)"
+                        class="btn btn-outline"
+                        style="width: 100%">Open Calendar</a
+                    >
                 </div>
 
                 <div class="info-block">
                     <h3>Direct Contact</h3>
-                    <p>Email: <a href="mailto:hello@strataforge.com">hello@strataforge.com</a></p>
-                    <p>Location: Lusaka, Zambia (Remote-first)</p>
+                    <div class="info-item">
+                        <Mail size={18} />
+                        <p>
+                            Email: <a href="mailto:hello@strataforge.com"
+                                >hello@strataforge.com</a
+                            >
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <Phone size={18} />
+                        <p>Phone: +260 ...</p>
+                    </div>
+                    <div class="info-item">
+                        <MapPin size={18} />
+                        <p>Location: Lusaka, Zambia (Remote-first)</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -116,5 +159,17 @@
 
     .form-group textarea {
         height: 120px;
+    }
+
+    .info-item {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 12px;
+        color: var(--color-text-muted);
+    }
+
+    .info-item p {
+        margin-bottom: 0 !important;
     }
 </style>
