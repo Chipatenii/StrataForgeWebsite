@@ -5,7 +5,7 @@
 <footer class="footer bg-neutral">
     <div class="container footer-grid">
         <div class="footer-brand">
-            <img src="/assets/primary-logo.png" alt="Strata Forge Technologies" class="footer-logo" />
+            <img src="/images/logo-full.png" alt="Strata Forge Technologies" class="footer-logo" />
             <p class="footer-tagline">Systems | Design | Marketing</p>
             <div class="footer-socials">
                 <!-- Social placeholders -->
@@ -45,62 +45,79 @@
 
 <style>
     .footer {
-        padding: 64px 24px 24px;
+        padding: 80px 24px 32px; /* Increased top padding for breathing room */
+        background-color: #f8f9fa; /* Slightly lighter neutral for cleanliness */
     }
 
     .footer-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 48px;
-        margin-bottom: 64px;
+        margin-bottom: 80px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         .footer-grid {
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr; /* Adjusted proportions */
+            gap: 64px;
         }
     }
 
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .footer-logo {
-        height: 40px;
-        margin-bottom: 16px;
+        height: 48px; /* Standardized with header */
+        width: auto;
+        margin-bottom: 20px;
     }
 
     .footer-tagline {
-        font-size: 0.9rem;
+        font-size: 1rem;
         color: var(--color-text-muted);
-        margin-bottom: 24px;
+        margin-bottom: 32px;
+        max-width: 300px;
+        line-height: 1.6;
     }
 
     .footer-socials {
         display: flex;
-        gap: 16px;
+        gap: 12px;
     }
 
     .footer-socials a {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
-        background: var(--color-primary);
-        color: var(--color-white);
+        background: white;
+        color: var(--color-primary);
+        border: 1px solid rgba(0,0,0,0.05);
         text-decoration: none;
-        font-size: 0.7rem;
-        font-weight: 700;
-        transition: var(--transition-smooth);
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
 
     .footer-socials a:hover {
         transform: translateY(-3px);
-        filter: brightness(1.2);
+        background: var(--color-primary);
+        color: white;
+        box-shadow: 0 4px 12px rgba(32, 53, 144, 0.2);
     }
 
     .footer-grid h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
         margin-bottom: 24px;
-        color: var(--color-primary);
+        color: var(--color-text-main); /* Darker heading for contrast */
+        letter-spacing: -0.01em;
     }
 
     .footer-links,
@@ -108,34 +125,51 @@
     .footer-contact {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
     }
 
     .footer-grid a {
         text-decoration: none;
         color: var(--color-text-muted);
-        font-size: 0.9rem;
-        transition: var(--transition-smooth);
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
     }
 
     .footer-grid a:hover {
         color: var(--color-primary);
-        padding-left: 4px;
+        padding-left: 6px; /* Subtle movement interaction */
     }
 
     .footer-contact p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         color: var(--color-text-muted);
+        margin: 0;
+    }
+
+    .footer-contact a {
+        font-weight: 500;
+        color: var(--color-primary);
     }
 
     .footer-bottom {
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
-        padding-top: 24px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        padding-top: 32px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    @media (min-width: 768px) {
+        .footer-bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
     }
 
     .footer-bottom p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: var(--color-text-muted);
     }
 </style>

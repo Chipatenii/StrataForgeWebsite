@@ -43,10 +43,8 @@ declare module '$env/static/private' {
 	export const DISPLAY: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const EFC_2960_1592913036: string;
+	export const EFC_7748_1592913036: string;
 	export const EXEPATH: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GIT_ASKPASS: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -92,7 +90,6 @@ declare module '$env/static/private' {
 	export const ORIGINAL_PATH: string;
 	export const ORIGINAL_TEMP: string;
 	export const ORIGINAL_TMP: string;
-	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const OS: string;
 	export const PATH: string;
 	export const PATHEXT: string;
@@ -181,10 +178,8 @@ declare module '$env/dynamic/private' {
 		DISPLAY: string;
 		DriverData: string;
 		EDITOR: string;
-		EFC_2960_1592913036: string;
+		EFC_7748_1592913036: string;
 		EXEPATH: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GIT_ASKPASS: string;
 		HOME: string;
 		HOMEDRIVE: string;
@@ -230,7 +225,6 @@ declare module '$env/dynamic/private' {
 		ORIGINAL_PATH: string;
 		ORIGINAL_TEMP: string;
 		ORIGINAL_TMP: string;
-		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		OS: string;
 		PATH: string;
 		PATHEXT: string;
