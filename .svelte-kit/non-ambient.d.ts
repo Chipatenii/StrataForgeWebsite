@@ -40,6 +40,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/how-we-work" | "/how-we-work/" | "/services" | "/services/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/assets/about-story.png" | "/assets/hero-visual.png" | "/assets/logo-mark.png" | "/assets/primary-logo.png" | "/assets/services-banner.png" | "/images/about_visual.png" | "/images/hero_visual.png" | "/images/services_banner.png" | string & {};
+		Asset(): "/assets/about-story.png" | "/assets/hero-visual.png" | "/assets/logo-mark.png" | "/assets/primary-logo.png" | "/assets/services-banner.png" | "/images/about_visual.png" | "/images/favicon.png" | "/images/hero_visual.png" | "/images/logo-full.png" | "/images/services_banner.png" | string & {};
 	}
 }
