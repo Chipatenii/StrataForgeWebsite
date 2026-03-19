@@ -56,10 +56,11 @@
     .sticky-header {
         position: sticky;
         top: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03); /* Premium floating feel */
+        background: rgba(255, 255, 255, 0.85); /* Transparent to showcase blur */
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04); /* Deeper, softer floating shadow */
         z-index: 1000;
         height: var(--header-height);
         display: flex;
@@ -120,16 +121,16 @@
         }
     }
 
-    .menu-desktop a {
+    .menu-desktop a:not(.btn) {
         text-decoration: none;
         color: var(--color-text-main);
-        font-weight: 500;
+        font-weight: 600; /* Bolder weight for premium typography */
         font-size: 0.95rem;
         transition: color 0.2s ease;
         position: relative;
     }
 
-    .menu-desktop a:hover {
+    .menu-desktop a:not(.btn):hover {
         color: var(--color-primary);
     }
 
@@ -223,7 +224,7 @@
         transform: translateY(0);
     }
 
-    .menu-mobile-content a {
+    .menu-mobile-content a:not(.btn) {
         font-family: 'Outfit', sans-serif;
         font-size: 1.75rem;
         font-weight: 600;
@@ -234,7 +235,7 @@
         display: block;
     }
 
-    .menu-mobile-content a:hover {
+    .menu-mobile-content a:not(.btn):hover {
         color: var(--color-primary);
     }
 </style>
