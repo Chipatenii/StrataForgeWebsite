@@ -6,11 +6,12 @@
         { num: '04', title: 'Launch & Grow', desc: 'Deploying your solution and fueling it with targeted growth campaigns.' },
         { num: '05', title: 'Support & Scale', desc: 'Ongoing maintenance and optimization to ensure long-term success.' }
     ];
+    import { inView } from "$lib/actions/inView.js";
 </script>
 
 <div class="how-we-work-page">
     <section class="page-intro bg-neutral">
-        <div class="container text-center">
+        <div class="container text-center fade-up-element" use:inView>
             <h1>How We Work</h1>
             <p class="large-text">Our process keeps everything connected. We follow a layered approach to ensure your brand and systems grow together.</p>
         </div>
@@ -18,8 +19,8 @@
 
     <section class="steps">
         <div class="container" style="max-width: 800px">
-            {#each steps as step (step.num)}
-                <div class="step-item" style="display: flex; gap: 32px; margin-bottom: 64px">
+            {#each steps as step, i (step.num)}
+                <div class="step-item fade-up-element delay-{Math.min((i+1)*100, 400)}" use:inView style="display: flex; gap: 32px; margin-bottom: 64px">
                     <div class="step-num" style="font-size: 2rem; font-weight: 800; color: var(--color-primary); opacity: 0.2">{step.num}</div>
                     <div>
                         <h3 class="mb-2">{step.title}</h3>
@@ -31,7 +32,7 @@
     </section>
 
     <section class="bg-neutral text-center" style="padding: 100px 24px">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <h2>Ready to experience the process?</h2>
             <p class="mb-4">Let's schedule a 30-minute discovery call.</p>
             <a href="/contact" class="btn btn-primary">Schedule Discovery Call</a>

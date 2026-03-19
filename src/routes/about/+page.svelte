@@ -1,6 +1,10 @@
+<script>
+    import { inView } from "$lib/actions/inView.js";
+</script>
+
 <div class="about-page">
     <section class="page-intro bg-neutral">
-        <div class="container text-center">
+        <div class="container text-center fade-up-element" use:inView>
             <h1>About Strata Forge</h1>
             <p class="large-text">
                 A dev-and-design-first company based in Lusaka, Zambia. We build
@@ -10,7 +14,7 @@
     </section>
 
     <section class="story">
-        <div class="container story-grid">
+        <div class="container story-grid fade-up-element" use:inView>
             <div>
                 <h2 class="mb-3">Where we started</h2>
                 <p>
@@ -35,7 +39,7 @@
     </section>
 
     <section class="team bg-neutral">
-        <div class="container text-center">
+        <div class="container text-center fade-up-element" use:inView>
             <h2 class="mb-6">The Minds Behind the Forge</h2>
             <div class="founder-card">
                 <div class="avatar"></div>
@@ -89,10 +93,17 @@
     .founder-card {
         background: white;
         padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
         max-width: 400px;
         margin: 0 auto;
+        transition: var(--transition-smooth);
+        border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .founder-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-md);
     }
 
     .avatar {

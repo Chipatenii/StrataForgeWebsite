@@ -10,14 +10,22 @@
     --color-text-main: #1a1a1a;
     --color-text-muted: #666666;
 
-    /* Layout */
+    /* Layout & Touch Targets */
     --max-width: 1280px;
     --header-height: 80px;
-    --section-padding: 80px 24px;
-    --section-padding-mobile: 48px 24px;
+    --section-padding: 100px 24px;
+    --section-padding-mobile: 64px 20px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+
+    /* Shadows & Effects */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 40px rgba(32, 53, 144, 0.08);
 
     /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 * {
@@ -66,14 +74,15 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
-    border-radius: 8px;
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: var(--transition-bounce);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.05rem;
     border: none;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary {
@@ -82,9 +91,9 @@ section {
 }
 
 .btn-primary:hover {
-    filter: brightness(1.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(32, 53, 144, 0.2);
+    filter: brightness(1.15);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
@@ -96,6 +105,8 @@ section {
 .btn-outline:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
 }
 
 .bg-neutral {
@@ -147,3 +158,20 @@ html {
 .w-full {
     width: 100%;
 }
+
+/* --- Animation Utilities --- */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up-element.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }

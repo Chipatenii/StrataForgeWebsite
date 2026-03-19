@@ -1,10 +1,11 @@
 <script>
     import { Phone, Mail, MapPin } from "lucide-svelte";
+    import { inView } from "$lib/actions/inView.js";
 </script>
 
 <div class="contact-page">
     <section class="page-intro bg-neutral">
-        <div class="container text-center">
+        <div class="container text-center fade-up-element" use:inView>
             <h1>Let's Start Growing</h1>
             <p class="large-text">
                 Have a system in mind or a brand that needs a fresh start? Let's
@@ -14,7 +15,7 @@
     </section>
 
     <section class="contact-main">
-        <div class="container contact-grid">
+        <div class="container contact-grid fade-up-element" use:inView>
             <div class="contact-form">
                 <h3 class="mb-4">Send a Message</h3>
                 <form>
@@ -131,8 +132,14 @@
     .contact-form {
         background: white;
         padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(0,0,0,0.03);
+        transition: var(--transition-smooth);
+    }
+
+    .contact-form:hover {
+        box-shadow: var(--shadow-md);
     }
 
     .form-group {
@@ -150,11 +157,12 @@
     .form-group select,
     .form-group textarea {
         width: 100%;
-        padding: 12px;
+        padding: 16px 16px; /* Increased for better touch targets */
         border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        border-radius: var(--radius-md);
         background: var(--color-secondary);
         font-family: inherit;
+        font-size: 1.05rem; /* Larger text for mobile inputs */
     }
 
     .form-group textarea {

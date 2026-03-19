@@ -118,8 +118,8 @@ function Webhook($$renderer, $$props) {
   ]));
 }
 function _page($$renderer) {
-  $$renderer.push(`<div class="services-page"><section class="page-intro bg-none svelte-4z030h" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('/images/services_banner.png'); background-size: cover; background-position: center; color: white;"><div class="container text-center"><h1 style="color: white;" class="svelte-4z030h">Core Systems. Premium Design.</h1> <p class="large-text svelte-4z030h" style="color: rgba(255, 255, 255, 0.9);">Digital systems and design are the core of what we do. Growth
-                marketing is the engine that drives it all forward.</p></div></section> <section id="systems-dev" class="service-detail svelte-4z030h"><div class="container"><h2 class="section-title">Systems &amp; Development</h2> <div class="service-items-grid svelte-4z030h"><div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
+  $$renderer.push(`<div class="services-page"><section class="page-intro bg-none svelte-4z030h" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('/images/services_banner.png'); background-size: cover; background-position: center; color: white;"><div class="container text-center fade-up-element"><h1 style="color: white;" class="svelte-4z030h">Core Systems. Premium Design.</h1> <p class="large-text svelte-4z030h" style="color: rgba(255, 255, 255, 0.9);">Digital systems and design are the core of what we do. Growth
+                marketing is the engine that drives it all forward.</p></div></section> <section id="systems-dev" class="service-detail svelte-4z030h"><div class="container fade-up-element"><h2 class="section-title">Systems &amp; Development</h2> <div class="service-items-grid svelte-4z030h"><div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
   Globe($$renderer, { size: 28 });
   $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">Business Websites</h4> <p class="svelte-4z030h">Fast, mobile-optimized, and built for SEO. Every pixel
                         is designed to convert visitors into clients.</p></div> <div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
@@ -128,7 +128,7 @@ function _page($$renderer) {
                         software that runs your business.</p></div> <div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
   Webhook($$renderer, { size: 28 });
   $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">APIs &amp; Automations</h4> <p class="svelte-4z030h">Connect payment gateways (DPO, Airtel, MTN) and automate
-                        repetitive tasks.</p></div></div></div></section> <section id="brand-design" class="service-detail bg-neutral svelte-4z030h"><div class="container"><h2 class="section-title">Brand &amp; Design</h2> <div class="service-items-grid svelte-4z030h"><div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
+                        repetitive tasks.</p></div></div></div></section> <section id="brand-design" class="service-detail bg-neutral svelte-4z030h"><div class="container fade-up-element"><h2 class="section-title">Brand &amp; Design</h2> <div class="service-items-grid svelte-4z030h"><div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
   Award($$renderer, { size: 28 });
   $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">Brand Identity</h4> <p class="svelte-4z030h">Logos, color systems, and brand guides that define how
                         the world sees you.</p></div> <div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
@@ -137,7 +137,7 @@ function _page($$renderer) {
                         premium edge.</p></div> <div class="item svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
   Pencil_ruler($$renderer, { size: 28 });
   $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">UI/UX Design</h4> <p class="svelte-4z030h">Human-centered wireframes and hi-fi prototypes built for
-                        clarity.</p></div></div></div></section> <section class="service-cta svelte-4z030h"><div class="container text-center"><h3>Not sure where to start?</h3> <p class="mb-4">Book a quick call and we’ll map it with you.</p> <a href="/contact" class="btn btn-primary">Schedule Discovery Call</a></div></section></div>`);
+                        clarity.</p></div></div></div></section> <section class="service-cta svelte-4z030h"><div class="container text-center fade-up-element"><h3>Not sure where to start?</h3> <p class="mb-4">Book a quick call and we’ll map it with you.</p> <a href="/contact" class="btn btn-primary">Schedule Discovery Call</a></div></section></div>`);
 }
 export {
   _page as default

@@ -8,12 +8,13 @@
         PencilRuler,
         Megaphone,
     } from "lucide-svelte";
+    import { inView } from "$lib/actions/inView.js";
 </script>
 
 <div class="home-page">
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="container hero-content">
+        <div class="container hero-content fade-up-element" use:inView>
             <div class="hero-text">
                 <h1>We build your systems and brand, then help them grow.</h1>
                 <p class="subtext">
@@ -43,7 +44,7 @@
 
     <!-- Who We Help Stripe -->
     <section class="who-we-help bg-neutral">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <h2 class="section-title text-center mb-4">
                 Empowering the engines of Zambia's economy.
             </h2>
@@ -66,7 +67,7 @@
 
     <!-- Pillars Section -->
     <section id="pillars" class="pillars">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <div class="text-center mb-6">
                 <h2 class="section-title">
                     Built in layers. Forged for growth.
@@ -115,7 +116,7 @@
 
     <!-- Featured Services -->
     <section id="featured-services" class="featured-services bg-neutral">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <div class="grid-2">
                 <div class="service-card">
                     <div class="icon-wrapper mb-3">
@@ -158,7 +159,7 @@
 
     <!-- Final CTA -->
     <section id="final-cta" class="final-cta text-center">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <h2>Let’s build something that actually scales.</h2>
             <p class="mb-4">
                 Ready to move from manual chaos to digital clarity? Let's map
@@ -312,14 +313,16 @@
     .pillar-card {
         padding: 40px;
         background: white;
-        border-radius: 20px;
+        border-radius: var(--radius-lg);
         border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: var(--shadow-sm);
         transition: var(--transition-smooth);
     }
 
     .pillar-card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--shadow-lg);
+        border-color: transparent;
     }
 
     .pillar-card h3 {
@@ -355,8 +358,17 @@
 
     .service-card {
         background: white;
-        padding: 32px;
-        border-radius: 16px;
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-smooth);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: transparent;
     }
 
     .service-card h4 {

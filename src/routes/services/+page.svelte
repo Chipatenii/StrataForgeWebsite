@@ -6,6 +6,7 @@
         Award,
         PencilRuler,
     } from "lucide-svelte";
+    import { inView } from "$lib/actions/inView.js";
 </script>
 
 <div class="services-page">
@@ -13,7 +14,7 @@
         class="page-intro bg-none"
         style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('/images/services_banner.png'); background-size: cover; background-position: center; color: white;"
     >
-        <div class="container text-center">
+        <div class="container text-center fade-up-element" use:inView>
             <h1 style="color: white;">Core Systems. Premium Design.</h1>
             <p class="large-text" style="color: rgba(255, 255, 255, 0.9);">
                 Digital systems and design are the core of what we do. Growth
@@ -23,7 +24,7 @@
     </section>
 
     <section id="systems-dev" class="service-detail">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <h2 class="section-title">Systems & Development</h2>
             <div class="service-items-grid">
                 <div class="item">
@@ -61,7 +62,7 @@
     </section>
 
     <section id="brand-design" class="service-detail bg-neutral">
-        <div class="container">
+        <div class="container fade-up-element" use:inView>
             <h2 class="section-title">Brand & Design</h2>
             <div class="service-items-grid">
                 <div class="item">
@@ -99,7 +100,7 @@
     </section>
 
     <section class="service-cta">
-        <div class="container text-center">
+        <div class="container text-center fade-up-element" use:inView>
             <h3>Not sure where to start?</h3>
             <p class="mb-4">Book a quick call and we’ll map it with you.</p>
             <a href="/contact" class="btn btn-primary"
@@ -151,6 +152,26 @@
     .icon-wrapper {
         color: var(--color-primary);
         margin-bottom: 16px;
+    }
+
+    .item {
+        background: white;
+        padding: 32px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-smooth);
+        border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .item:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+        border-color: transparent;
+    }
+
+    .service-detail.bg-neutral .item {
+        /* Distinguish from gray background */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02); 
     }
 
     .item p {

@@ -78,7 +78,7 @@
     .logo-container {
         display: flex;
         align-items: center;
-        padding: 4px 0; /* Touch target */
+        padding: 12px 0; /* Touch target increased for better mobile experience */
     }
 
     .logo-desktop {
@@ -153,8 +153,9 @@
         background: none;
         border: none;
         cursor: pointer;
-        padding: 8px;
+        padding: 16px; /* Increased for better touch target */
         z-index: 1100;
+        margin-right: -8px; /* Offset to keep alignment */
     }
 
     @media (min-width: 992px) {
@@ -228,6 +229,8 @@
         color: var(--color-text-main);
         text-decoration: none;
         transition: color 0.3s;
+        padding: 12px 24px;
+        display: block;
     }
 
     .menu-mobile-content a:hover {

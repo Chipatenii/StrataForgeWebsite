@@ -92,14 +92,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
+        width: 48px; /* Touch target increased for mobile */
+        height: 48px;
         border-radius: 50%;
         background: white;
         color: var(--color-primary);
         border: 1px solid rgba(0,0,0,0.05);
         text-decoration: none;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: 600;
         transition: all 0.3s ease;
         box-shadow: 0 2px 8px rgba(0,0,0,0.03);
@@ -125,7 +125,7 @@
     .footer-contact {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 20px; /* Increased for better touch target spacing */
     }
 
     .footer-grid a {
