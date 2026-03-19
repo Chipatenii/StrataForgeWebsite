@@ -237,7 +237,7 @@ function _page($$renderer) {
   $$renderer.push(`<!----></div> <h4 class="svelte-1uha8ag">UI/UX Design</h4> <p class="svelte-1uha8ag">Human-centered design that prioritizes your users.</p></div> <div class="service-card svelte-1uha8ag"><div class="icon-wrapper mb-3 svelte-1uha8ag">`);
   Megaphone($$renderer, { size: 24 });
   $$renderer.push(`<!----></div> <h4 class="svelte-1uha8ag">Paid Campaigns</h4> <p class="svelte-1uha8ag">Strategic growth through Meta, Google, and TikTok ads.</p></div></div></div></section> <section id="final-cta" class="final-cta text-center svelte-1uha8ag"><div class="container fade-up-element"><h2 class="svelte-1uha8ag">Let’s build something that actually scales.</h2> <p class="mb-4">Ready to move from manual chaos to digital clarity? Let's map
-                your project together.</p> <div class="hero-ctas svelte-1uha8ag"><a href="/contact" class="btn btn-primary">Book a Discovery Call</a> <a href="https://wa.me/260..." class="btn btn-outline">Send us a WhatsApp</a></div></div></section></div>`);
+                your project together.</p> <div class="hero-ctas svelte-1uha8ag"><a href="/contact" class="btn btn-primary">Book a Discovery Call</a> <a href="https://wa.me/260979082676" class="btn btn-outline">Send us a WhatsApp</a></div></div></section></div>`);
 }
 export {
   _page as default

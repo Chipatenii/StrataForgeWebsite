@@ -80,14 +80,14 @@
                     <div class="info-item">
                         <Mail size={18} />
                         <p>
-                            Email: <a href="mailto:hello@strataforge.com"
-                                >hello@strataforge.com</a
+                            Email: <a href="mailto:strataforgetechnologies@gmail.com"
+                                >strataforgetechnologies@gmail.com</a
                             >
                         </p>
                     </div>
                     <div class="info-item">
                         <Phone size={18} />
-                        <p>Phone: +260 ...</p>
+                        <p>Phone: +260979082676</p>
                     </div>
                     <div class="info-item">
                         <MapPin size={18} />

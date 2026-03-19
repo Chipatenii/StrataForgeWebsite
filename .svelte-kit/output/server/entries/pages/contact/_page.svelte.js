@@ -130,9 +130,9 @@ function _page($$renderer) {
   $$renderer.push(`</select></div> <div class="form-group svelte-1bv7ezn"><label for="message" class="svelte-1bv7ezn">Message</label> <textarea id="message" placeholder="Tell us about your project..." class="svelte-1bv7ezn"></textarea></div> <button type="button" class="btn btn-primary w-full" style="width: 100%">Send Inquiry</button></form></div> <div class="contact-info"><div class="info-block mb-6"><h3>Book a Call</h3> <p class="mb-3">Schedule a 30-minute discovery call to discuss your
                         project.</p> <a href="javascript:void(0)" class="btn btn-outline" style="width: 100%">Open Calendar</a></div> <div class="info-block"><h3>Direct Contact</h3> <div class="info-item svelte-1bv7ezn">`);
   Mail($$renderer, { size: 18 });
-  $$renderer.push(`<!----> <p class="svelte-1bv7ezn">Email: <a href="mailto:hello@strataforge.com">hello@strataforge.com</a></p></div> <div class="info-item svelte-1bv7ezn">`);
+  $$renderer.push(`<!----> <p class="svelte-1bv7ezn">Email: <a href="mailto:strataforgetechnologies@gmail.com">strataforgetechnologies@gmail.com</a></p></div> <div class="info-item svelte-1bv7ezn">`);
   Phone($$renderer, { size: 18 });
-  $$renderer.push(`<!----> <p class="svelte-1bv7ezn">Phone: +260 ...</p></div> <div class="info-item svelte-1bv7ezn">`);
+  $$renderer.push(`<!----> <p class="svelte-1bv7ezn">Phone: +260979082676</p></div> <div class="info-item svelte-1bv7ezn">`);
   Map_pin($$renderer, { size: 18 });
   $$renderer.push(`<!----> <p class="svelte-1bv7ezn">Location: Lusaka, Zambia (Remote-first)</p></div></div></div></div></section></div>`);
 }

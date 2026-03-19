@@ -169,7 +169,7 @@
                 <a href="/contact" class="btn btn-primary"
                     >Book a Discovery Call</a
                 >
-                <a href="https://wa.me/260..." class="btn btn-outline"
+                <a href="https://wa.me/260979082676" class="btn btn-outline"
                     >Send us a WhatsApp</a
                 >
             </div>

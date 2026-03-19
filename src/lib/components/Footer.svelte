@@ -1,4 +1,5 @@
 <script>
+    import { Linkedin, Facebook, Instagram } from "lucide-svelte";
     const currentYear = new Date().getFullYear();
 </script>
 
@@ -8,10 +9,9 @@
             <img src="/images/logo-full.png" alt="Strata Forge Technologies" class="footer-logo" />
             <p class="footer-tagline">Systems | Design | Marketing</p>
             <div class="footer-socials">
-                <!-- Social placeholders -->
-                <a href="#" aria-label="Facebook">FB</a>
-                <a href="#" aria-label="Instagram">IG</a>
-                <a href="#" aria-label="LinkedIn">LI</a>
+                <a href="https://www.facebook.com/strataforgetechnologies/" target="_blank" aria-label="Facebook"><Facebook size={20} /></a>
+                <a href="https://www.instagram.com/strataforgetech/" target="_blank" aria-label="Instagram"><Instagram size={20} /></a>
+                <a href="https://www.linkedin.com/company/strataforgetechnologies/" target="_blank" aria-label="LinkedIn"><Linkedin size={20} /></a>
             </div>
         </div>
 
@@ -33,8 +33,8 @@
         <div class="footer-contact">
             <h4>Get in Touch</h4>
             <p>Lusaka, Zambia</p>
-            <p>Remote-first Culture</p>
-            <a href="mailto:hello@strataforge.com">hello@strataforge.com</a>
+            <p>+260979082676</p>
+            <a href="mailto:strataforgetechnologies@gmail.com">strataforgetechnologies@gmail.com</a>
         </div>
     </div>
 
@@ -45,8 +45,10 @@
 
 <style>
     .footer {
-        padding: 80px 24px 32px; /* Increased top padding for breathing room */
-        background-color: #f8f9fa; /* Slightly lighter neutral for cleanliness */
+        padding: 80px 24px 32px; 
+        background-color: var(--color-white); 
+        box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.02); /* Premium soft top shadow */
+        border-top: 1px solid rgba(0, 0, 0, 0.03);
     }
 
     .footer-grid {

@@ -56,9 +56,10 @@
     .sticky-header {
         position: sticky;
         top: 0;
-        background: rgba(255, 255, 255, 0.98); /* Slightly more opaque for premium feel */
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03); /* Premium floating feel */
         z-index: 1000;
         height: var(--header-height);
         display: flex;
