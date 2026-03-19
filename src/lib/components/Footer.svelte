@@ -19,6 +19,7 @@
             <h4>Quick Links</h4>
             <a href="/">Home</a>
             <a href="/services">Services</a>
+            <a href="/portfolio">Portfolio</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
         </div>

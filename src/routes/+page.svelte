@@ -49,16 +49,16 @@
                 Empowering the engines of Zambia's economy.
             </h2>
             <div class="help-grid">
-                <div class="help-item">
+                <div class="help-item glass-panel">
                     <span>SMEs & Growing Businesses</span>
                 </div>
-                <div class="help-item">
+                <div class="help-item glass-panel">
                     <span>Colleges & Institutions</span>
                 </div>
-                <div class="help-item">
+                <div class="help-item glass-panel">
                     <span>Finance & Fintech</span>
                 </div>
-                <div class="help-item">
+                <div class="help-item glass-panel">
                     <span>Service Brands</span>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 </p>
             </div>
             <div class="pillars-grid">
-                <div class="pillar-card">
+                <div class="pillar-card glass-panel">
                     <div class="icon-wrapper">
                         <Cpu size={32} />
                     </div>
@@ -88,7 +88,7 @@
                     </p>
                     <a href="/services#systems-dev">Learn more →</a>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card glass-panel">
                     <div class="icon-wrapper">
                         <Palette size={32} />
                     </div>
@@ -99,7 +99,7 @@
                     </p>
                     <a href="/services#brand-design">Learn more →</a>
                 </div>
-                <div class="pillar-card">
+                <div class="pillar-card glass-panel">
                     <div class="icon-wrapper">
                         <TrendingUp size={32} />
                     </div>
@@ -118,7 +118,7 @@
     <section id="featured-services" class="featured-services bg-neutral">
         <div class="container fade-up-element" use:inView>
             <div class="grid-2">
-                <div class="service-card">
+                <div class="service-card glass-panel">
                     <div class="icon-wrapper mb-3">
                         <Globe size={24} />
                     </div>
@@ -127,7 +127,7 @@
                         High-performance, mobile-first windows to your business.
                     </p>
                 </div>
-                <div class="service-card">
+                <div class="service-card glass-panel">
                     <div class="icon-wrapper mb-3">
                         <Layout size={24} />
                     </div>
@@ -137,14 +137,14 @@
                         bottlenecks.
                     </p>
                 </div>
-                <div class="service-card">
+                <div class="service-card glass-panel">
                     <div class="icon-wrapper mb-3">
                         <PencilRuler size={24} />
                     </div>
                     <h4>UI/UX Design</h4>
                     <p>Human-centered design that prioritizes your users.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card glass-panel">
                     <div class="icon-wrapper mb-3">
                         <Megaphone size={24} />
                     </div>
@@ -288,13 +288,13 @@
     }
 
     .help-item {
-        background: white;
         padding: 20px;
         border-radius: 12px;
         text-align: center;
         font-size: 0.85rem;
         font-weight: 600;
         color: var(--color-primary);
+        border: 1px solid rgba(255,255,255,0.3);
     }
 
     /* Pillars */
@@ -312,9 +312,7 @@
 
     .pillar-card {
         padding: 40px;
-        background: white;
         border-radius: var(--radius-lg);
-        border: 1px solid rgba(0, 0, 0, 0.05);
         box-shadow: var(--shadow-sm);
         transition: var(--transition-smooth);
     }
@@ -357,12 +355,10 @@
     }
 
     .service-card {
-        background: white;
         padding: 40px;
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-sm);
         transition: var(--transition-smooth);
-        border: 1px solid rgba(0, 0, 0, 0.03);
     }
 
     .service-card:hover {

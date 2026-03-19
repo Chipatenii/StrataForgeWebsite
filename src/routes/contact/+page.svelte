@@ -4,10 +4,10 @@
 </script>
 
 <div class="contact-page">
-    <section class="page-intro bg-neutral">
+    <section class="page-intro" style="background: linear-gradient(rgba(32, 53, 144, 0.85), rgba(32, 53, 144, 0.95)), url('/images/services_banner.png'); background-size: cover; background-position: center;">
         <div class="container text-center fade-up-element" use:inView>
-            <h1>Let's Start Growing</h1>
-            <p class="large-text">
+            <h1 style="color: white; margin-bottom: 24px;">Let's Start Growing</h1>
+            <p class="large-text" style="color: rgba(255, 255, 255, 0.9);">
                 Have a system in mind or a brand that needs a fresh start? Let's
                 talk about how we can forge it together.
             </p>
@@ -16,7 +16,7 @@
 
     <section class="contact-main">
         <div class="container contact-grid fade-up-element" use:inView>
-            <div class="contact-form">
+            <div class="contact-form glass-panel">
                 <h3 class="mb-4">Send a Message</h3>
                 <form>
                     <div class="form-group">
@@ -69,7 +69,7 @@
                         project.
                     </p>
                     <a
-                        href="javascript:void(0)"
+                        href="#"
                         class="btn btn-outline"
                         style="width: 100%">Open Calendar</a
                     >
@@ -130,7 +130,6 @@
     }
 
     .contact-form {
-        background: white;
         padding: 40px;
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-sm);

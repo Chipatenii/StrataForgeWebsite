@@ -10,10 +10,10 @@
 </script>
 
 <div class="how-we-work-page">
-    <section class="page-intro bg-neutral">
+    <section class="page-intro" style="background: linear-gradient(rgba(32, 53, 144, 0.85), rgba(32, 53, 144, 0.95)), url('/images/services_banner.png'); background-size: cover; background-position: center;">
         <div class="container text-center fade-up-element" use:inView>
-            <h1>How We Work</h1>
-            <p class="large-text">Our process keeps everything connected. We follow a layered approach to ensure your brand and systems grow together.</p>
+            <h1 style="color: white; margin-bottom: 24px;">How We Work</h1>
+            <p class="large-text" style="color: rgba(255, 255, 255, 0.9);">Our process keeps everything connected. We follow a layered approach to ensure your brand and systems grow together.</p>
         </div>
     </section>
 

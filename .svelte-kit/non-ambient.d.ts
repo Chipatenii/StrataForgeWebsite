@@ -27,7 +27,7 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/about" | "/contact" | "/how-we-work" | "/services";
+		RouteId(): "/" | "/about" | "/contact" | "/how-we-work" | "/portfolio" | "/services";
 		RouteParams(): {
 			
 		};
@@ -36,9 +36,10 @@ declare module "$app/types" {
 			"/about": Record<string, never>;
 			"/contact": Record<string, never>;
 			"/how-we-work": Record<string, never>;
+			"/portfolio": Record<string, never>;
 			"/services": Record<string, never>
 		};
-		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/how-we-work" | "/how-we-work/" | "/services" | "/services/";
+		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/how-we-work" | "/how-we-work/" | "/portfolio" | "/portfolio/" | "/services" | "/services/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/assets/about-story.png" | "/assets/hero-visual.png" | "/assets/logo-mark.png" | "/assets/primary-logo.png" | "/assets/services-banner.png" | "/images/about_visual.png" | "/images/favicon.png" | "/images/hero_visual.png" | "/images/logo-full.png" | "/images/services_banner.png" | string & {};
 	}

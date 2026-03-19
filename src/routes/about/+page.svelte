@@ -3,10 +3,10 @@
 </script>
 
 <div class="about-page">
-    <section class="page-intro bg-neutral">
+    <section class="page-intro" style="background: linear-gradient(rgba(32, 53, 144, 0.85), rgba(32, 53, 144, 0.95)), url('/images/services_banner.png'); background-size: cover; background-position: center;">
         <div class="container text-center fade-up-element" use:inView>
-            <h1>About Strata Forge</h1>
-            <p class="large-text">
+            <h1 style="color: white; margin-bottom: 24px;">About Strata Forge</h1>
+            <p class="large-text" style="color: rgba(255, 255, 255, 0.9);">
                 A dev-and-design-first company based in Lusaka, Zambia. We build
                 the digital backbone for modern businesses.
             </p>
@@ -41,7 +41,7 @@
     <section class="team bg-neutral">
         <div class="container text-center fade-up-element" use:inView>
             <h2 class="mb-6">The Minds Behind the Forge</h2>
-            <div class="founder-card">
+            <div class="founder-card glass-panel fade-up-element delay-100" use:inView>
                 <div class="avatar"></div>
                 <h3>Innocent Manda</h3>
                 <p
@@ -91,7 +91,6 @@
     }
 
     .founder-card {
-        background: white;
         padding: 40px;
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-sm);

@@ -27,7 +27,7 @@
         <div class="container fade-up-element" use:inView>
             <h2 class="section-title">Systems & Development</h2>
             <div class="service-items-grid">
-                <div class="item">
+                <div class="item glass-panel">
                     <div class="icon-wrapper">
                         <Globe size={28} />
                     </div>
@@ -37,7 +37,7 @@
                         is designed to convert visitors into clients.
                     </p>
                 </div>
-                <div class="item">
+                <div class="item glass-panel">
                     <div class="icon-wrapper">
                         <Database size={28} />
                     </div>
@@ -47,7 +47,7 @@
                         software that runs your business.
                     </p>
                 </div>
-                <div class="item">
+                <div class="item glass-panel">
                     <div class="icon-wrapper">
                         <Webhook size={28} />
                     </div>
@@ -65,7 +65,7 @@
         <div class="container fade-up-element" use:inView>
             <h2 class="section-title">Brand & Design</h2>
             <div class="service-items-grid">
-                <div class="item">
+                <div class="item glass-panel">
                     <div class="icon-wrapper">
                         <Award size={28} />
                     </div>
@@ -75,7 +75,7 @@
                         the world sees you.
                     </p>
                 </div>
-                <div class="item">
+                <div class="item glass-panel">
                     <div class="icon-wrapper">
                         <PencilRuler size={28} />
                     </div>
@@ -85,7 +85,7 @@
                         premium edge.
                     </p>
                 </div>
-                <div class="item">
+                <div class="item glass-panel">
                     <div class="icon-wrapper">
                         <PencilRuler size={28} />
                     </div>
@@ -155,12 +155,10 @@
     }
 
     .item {
-        background: white;
         padding: 32px;
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-sm);
         transition: var(--transition-smooth);
-        border: 1px solid rgba(0,0,0,0.03);
     }
 
     .item:hover {

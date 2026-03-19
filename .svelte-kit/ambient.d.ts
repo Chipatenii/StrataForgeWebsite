@@ -28,12 +28,12 @@
 declare module '$env/static/private' {
 	export const ACLOCAL_PATH: string;
 	export const ALLUSERSPROFILE: string;
-	export const ANTIGRAVITY_AGENT: string;
 	export const ANTIGRAVITY_CLI_ALIAS: string;
 	export const APPDATA: string;
 	export const ChocolateyInstall: string;
 	export const ChocolateyLastPathUpdate: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
+	export const CLAUDE_CODE_SSE_PORT: string;
 	export const COLOR: string;
 	export const COLORTERM: string;
 	export const COMMONPROGRAMFILES: string;
@@ -88,14 +88,12 @@ declare module '$env/static/private' {
 	export const npm_package_name: string;
 	export const npm_package_version: string;
 	export const NUMBER_OF_PROCESSORS: string;
-	export const OLDPWD: string;
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
 	export const ORIGINAL_PATH: string;
 	export const ORIGINAL_TEMP: string;
 	export const ORIGINAL_TMP: string;
 	export const OS: string;
-	export const PAGER: string;
 	export const PATH: string;
 	export const PATHEXT: string;
 	export const PKG_CONFIG_PATH: string;
@@ -168,12 +166,12 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		ACLOCAL_PATH: string;
 		ALLUSERSPROFILE: string;
-		ANTIGRAVITY_AGENT: string;
 		ANTIGRAVITY_CLI_ALIAS: string;
 		APPDATA: string;
 		ChocolateyInstall: string;
 		ChocolateyLastPathUpdate: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
+		CLAUDE_CODE_SSE_PORT: string;
 		COLOR: string;
 		COLORTERM: string;
 		COMMONPROGRAMFILES: string;
@@ -228,14 +226,12 @@ declare module '$env/dynamic/private' {
 		npm_package_name: string;
 		npm_package_version: string;
 		NUMBER_OF_PROCESSORS: string;
-		OLDPWD: string;
 		OneDrive: string;
 		OneDriveConsumer: string;
 		ORIGINAL_PATH: string;
 		ORIGINAL_TEMP: string;
 		ORIGINAL_TMP: string;
 		OS: string;
-		PAGER: string;
 		PATH: string;
 		PATHEXT: string;
 		PKG_CONFIG_PATH: string;

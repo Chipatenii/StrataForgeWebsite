@@ -22,6 +22,7 @@
             <a href="/">Home</a>
             <a href="/services">Services</a>
             <a href="/how-we-work">Process</a>
+            <a href="/portfolio">Portfolio</a>
             <a href="/about">About</a>
             <a href="/contact" class="btn btn-primary">Book a Call</a>
         </div>
@@ -45,6 +46,7 @@
                 <a href="/" onclick={closeMenu}>Home</a>
                 <a href="/services" onclick={closeMenu}>Services</a>
                 <a href="/how-we-work" onclick={closeMenu}>Process</a>
+                <a href="/portfolio" onclick={closeMenu}>Portfolio</a>
                 <a href="/about" onclick={closeMenu}>About</a>
                 <a href="/contact" class="btn btn-primary" onclick={closeMenu}>Book a Call</a>
             </div>

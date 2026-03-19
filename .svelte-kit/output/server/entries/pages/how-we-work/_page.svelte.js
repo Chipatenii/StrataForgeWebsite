@@ -28,7 +28,7 @@ function _page($$renderer) {
       desc: "Ongoing maintenance and optimization to ensure long-term success."
     }
   ];
-  $$renderer.push(`<div class="how-we-work-page"><section class="page-intro bg-neutral svelte-64k27m"><div class="container text-center fade-up-element"><h1 class="svelte-64k27m">How We Work</h1> <p class="large-text svelte-64k27m">Our process keeps everything connected. We follow a layered approach to ensure your brand and systems grow together.</p></div></section> <section class="steps"><div class="container" style="max-width: 800px"><!--[-->`);
+  $$renderer.push(`<div class="how-we-work-page"><section class="page-intro svelte-64k27m" style="background: linear-gradient(rgba(32, 53, 144, 0.85), rgba(32, 53, 144, 0.95)), url('/images/services_banner.png'); background-size: cover; background-position: center;"><div class="container text-center fade-up-element"><h1 style="color: white; margin-bottom: 24px;" class="svelte-64k27m">How We Work</h1> <p class="large-text svelte-64k27m" style="color: rgba(255, 255, 255, 0.9);">Our process keeps everything connected. We follow a layered approach to ensure your brand and systems grow together.</p></div></section> <section class="steps"><div class="container" style="max-width: 800px"><!--[-->`);
   const each_array = ensure_array_like(steps);
   for (let i = 0, $$length = each_array.length; i < $$length; i++) {
     let step = each_array[i];

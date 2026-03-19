@@ -107,8 +107,8 @@ function Phone($$renderer, $$props) {
   ]));
 }
 function _page($$renderer) {
-  $$renderer.push(`<div class="contact-page"><section class="page-intro bg-neutral svelte-1bv7ezn"><div class="container text-center fade-up-element"><h1 class="svelte-1bv7ezn">Let's Start Growing</h1> <p class="large-text svelte-1bv7ezn">Have a system in mind or a brand that needs a fresh start? Let's
-                talk about how we can forge it together.</p></div></section> <section class="contact-main"><div class="container contact-grid fade-up-element svelte-1bv7ezn"><div class="contact-form svelte-1bv7ezn"><h3 class="mb-4">Send a Message</h3> <form><div class="form-group svelte-1bv7ezn"><label for="name" class="svelte-1bv7ezn">Full Name</label> <input type="text" id="name" placeholder="e.g. John Doe" class="svelte-1bv7ezn"/></div> <div class="form-group svelte-1bv7ezn"><label for="email" class="svelte-1bv7ezn">Business Email</label> <input type="email" id="email" placeholder="john@example.com" class="svelte-1bv7ezn"/></div> <div class="form-group svelte-1bv7ezn"><label for="type" class="svelte-1bv7ezn">Project Type</label> <select id="type" class="svelte-1bv7ezn">`);
+  $$renderer.push(`<div class="contact-page"><section class="page-intro svelte-1bv7ezn" style="background: linear-gradient(rgba(32, 53, 144, 0.85), rgba(32, 53, 144, 0.95)), url('/images/services_banner.png'); background-size: cover; background-position: center;"><div class="container text-center fade-up-element"><h1 style="color: white; margin-bottom: 24px;" class="svelte-1bv7ezn">Let's Start Growing</h1> <p class="large-text svelte-1bv7ezn" style="color: rgba(255, 255, 255, 0.9);">Have a system in mind or a brand that needs a fresh start? Let's
+                talk about how we can forge it together.</p></div></section> <section class="contact-main"><div class="container contact-grid fade-up-element svelte-1bv7ezn"><div class="contact-form glass-panel svelte-1bv7ezn"><h3 class="mb-4">Send a Message</h3> <form><div class="form-group svelte-1bv7ezn"><label for="name" class="svelte-1bv7ezn">Full Name</label> <input type="text" id="name" placeholder="e.g. John Doe" class="svelte-1bv7ezn"/></div> <div class="form-group svelte-1bv7ezn"><label for="email" class="svelte-1bv7ezn">Business Email</label> <input type="email" id="email" placeholder="john@example.com" class="svelte-1bv7ezn"/></div> <div class="form-group svelte-1bv7ezn"><label for="type" class="svelte-1bv7ezn">Project Type</label> <select id="type" class="svelte-1bv7ezn">`);
   $$renderer.option({}, ($$renderer2) => {
     $$renderer2.push(`Select Option`);
   });
@@ -128,7 +128,7 @@ function _page($$renderer) {
     $$renderer2.push(`Something Else`);
   });
   $$renderer.push(`</select></div> <div class="form-group svelte-1bv7ezn"><label for="message" class="svelte-1bv7ezn">Message</label> <textarea id="message" placeholder="Tell us about your project..." class="svelte-1bv7ezn"></textarea></div> <button type="button" class="btn btn-primary w-full" style="width: 100%">Send Inquiry</button></form></div> <div class="contact-info"><div class="info-block mb-6"><h3>Book a Call</h3> <p class="mb-3">Schedule a 30-minute discovery call to discuss your
-                        project.</p> <a href="javascript:void(0)" class="btn btn-outline" style="width: 100%">Open Calendar</a></div> <div class="info-block"><h3>Direct Contact</h3> <div class="info-item svelte-1bv7ezn">`);
+                        project.</p> <a href="#" class="btn btn-outline" style="width: 100%">Open Calendar</a></div> <div class="info-block"><h3>Direct Contact</h3> <div class="info-item svelte-1bv7ezn">`);
   Mail($$renderer, { size: 18 });
   $$renderer.push(`<!----> <p class="svelte-1bv7ezn">Email: <a href="mailto:strataforgetechnologies@gmail.com">strataforgetechnologies@gmail.com</a></p></div> <div class="info-item svelte-1bv7ezn">`);
   Phone($$renderer, { size: 18 });
