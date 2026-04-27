@@ -1,5 +1,6 @@
 <script>
     import { Linkedin, Facebook, Instagram } from "lucide-svelte";
+    import { PACRA_NUMBER } from "$lib/siteConfig.js";
     const currentYear = new Date().getFullYear();
 </script>
 
@@ -41,6 +42,8 @@
 
     <div class="container footer-bottom">
         <p>&copy; {currentYear} Strata Forge Technologies Limited. All rights reserved.</p>
+        <!-- TODO: Replace [PACRA_NUMBER] in src/lib/siteConfig.js -->
+        <p class="footer-registration">Registered in Zambia &middot; PACRA No. {PACRA_NUMBER}</p>
     </div>
 </footer>
 
@@ -160,19 +163,17 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 16px;
-    }
-    
-    @media (min-width: 768px) {
-        .footer-bottom {
-            flex-direction: row;
-            justify-content: space-between;
-            text-align: left;
-        }
+        gap: 6px;
     }
 
     .footer-bottom p {
         font-size: 0.85rem;
         color: var(--color-text-muted);
+    }
+
+    .footer-registration {
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
+        opacity: 0.8;
     }
 </style>

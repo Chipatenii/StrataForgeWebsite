@@ -1,4 +1,6 @@
 <script>
+    import { whatsappUrl } from '$lib/siteConfig.js';
+
     let isMenuOpen = $state(false);
 
     const toggleMenu = () => {
@@ -24,7 +26,7 @@
             <a href="/how-we-work">Process</a>
             <a href="/portfolio">Portfolio</a>
             <a href="/about">About</a>
-            <a href="/contact" class="btn btn-primary">Book a Call</a>
+            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp Us</a>
         </div>
 
         <!-- Mobile Toggle -->
@@ -48,7 +50,7 @@
                 <a href="/how-we-work" onclick={closeMenu}>Process</a>
                 <a href="/portfolio" onclick={closeMenu}>Portfolio</a>
                 <a href="/about" onclick={closeMenu}>About</a>
-                <a href="/contact" class="btn btn-primary" onclick={closeMenu}>Book a Call</a>
+                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" class="btn btn-primary" onclick={closeMenu}>WhatsApp Us</a>
             </div>
         </div>
     </nav>

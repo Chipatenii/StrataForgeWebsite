@@ -1,6 +1,7 @@
 <script>
     import { Phone, Mail, MapPin } from "lucide-svelte";
     import { inView } from "$lib/actions/inView.js";
+    import FAQ from "$lib/components/FAQ.svelte";
 </script>
 
 <div class="contact-page">
@@ -68,8 +69,9 @@
                         Schedule a 30-minute discovery call to discuss your
                         project.
                     </p>
+                    <!-- TODO: Replace with real calendar booking URL -->
                     <a
-                        href="#"
+                        href="/contact"
                         class="btn btn-outline"
                         style="width: 100%">Open Calendar</a
                     >
@@ -97,6 +99,8 @@
             </div>
         </div>
     </section>
+
+    <FAQ />
 </div>
 
 <style>

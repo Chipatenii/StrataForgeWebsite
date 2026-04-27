@@ -1,6 +1,10 @@
 <script>
 	import { Cpu, Palette, TrendingUp, Globe, Layout, PencilRuler, Megaphone } from 'lucide-svelte';
 	import { inView } from '$lib/actions/inView.js';
+	import ClientLogos from '$lib/components/ClientLogos.svelte';
+	import Testimonials from '$lib/components/Testimonials.svelte';
+	import FAQ from '$lib/components/FAQ.svelte';
+	import { whatsappUrl } from '$lib/siteConfig.js';
 </script>
 
 <div class="home-page">
@@ -14,7 +18,7 @@
 					growing regional brands—then amplified with data-driven marketing.
 				</p>
 				<div class="hero-ctas">
-					<a href="/contact" class="btn btn-primary">Book a Discovery Call</a>
+					<a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Chat on WhatsApp</a>
 					<a href="/services" class="btn btn-outline">View Services</a>
 				</div>
 			</div>
@@ -25,6 +29,9 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Client Logos -->
+	<ClientLogos />
 
 	<!-- Who We Help Stripe -->
 	<section class="who-we-help bg-neutral">
@@ -119,6 +126,12 @@
 		</div>
 	</section>
 
+	<!-- Testimonials -->
+	<Testimonials />
+
+	<!-- FAQ -->
+	<FAQ />
+
 	<!-- Final CTA -->
 	<section id="final-cta" class="final-cta text-center">
 		<div class="container fade-up-element" use:inView>
@@ -127,8 +140,8 @@
 				Ready to move from manual chaos to digital clarity? Let's map your project together.
 			</p>
 			<div class="hero-ctas">
-				<a href="/contact" class="btn btn-primary">Book a Discovery Call</a>
-				<a href="https://wa.me/260979082676" class="btn btn-outline">Send us a WhatsApp</a>
+				<a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start on WhatsApp</a>
+				<a href="/contact" class="btn btn-outline">Book a Discovery Call</a>
 			</div>
 		</div>
 	</section>

@@ -1,9 +1,13 @@
 import "clsx";
-import { w as attr_class, x as stringify, y as sanitize_props, z as spread_props, F as slot } from "../../chunks/index.js";
+import { w as attr, x as attr_class, y as stringify, z as sanitize_props, F as spread_props, G as slot } from "../../chunks/index.js";
+import { w as whatsappUrl, P as PACRA_NUMBER } from "../../chunks/siteConfig.js";
 import { j as escape_html } from "../../chunks/context.js";
 import { I as Icon } from "../../chunks/Icon.js";
-function Header($$renderer) {
-  $$renderer.push(`<header class="sticky-header svelte-1elxaub"><nav class="container nav-bar svelte-1elxaub"><a href="/" class="logo-container svelte-1elxaub"><img src="/images/logo-full.png" alt="Strata Forge Technologies" class="logo-desktop svelte-1elxaub"/> <img src="/images/logo-full.png" alt="Strata Forge" class="logo-mobile svelte-1elxaub"/></a> <div class="menu-desktop svelte-1elxaub"><a href="/" class="svelte-1elxaub">Home</a> <a href="/services" class="svelte-1elxaub">Services</a> <a href="/how-we-work" class="svelte-1elxaub">Process</a> <a href="/portfolio" class="svelte-1elxaub">Portfolio</a> <a href="/about" class="svelte-1elxaub">About</a> <a href="/contact" class="btn btn-primary svelte-1elxaub">Book a Call</a></div> <button class="menu-toggle svelte-1elxaub" aria-label="Toggle menu"><div${attr_class(`hamburger ${stringify("")}`, "svelte-1elxaub")}><span class="svelte-1elxaub"></span> <span class="svelte-1elxaub"></span> <span class="svelte-1elxaub"></span></div></button> <div${attr_class(`menu-mobile-overlay ${stringify("")}`, "svelte-1elxaub")}><div class="menu-mobile-content svelte-1elxaub"><a href="/" class="svelte-1elxaub">Home</a> <a href="/services" class="svelte-1elxaub">Services</a> <a href="/how-we-work" class="svelte-1elxaub">Process</a> <a href="/portfolio" class="svelte-1elxaub">Portfolio</a> <a href="/about" class="svelte-1elxaub">About</a> <a href="/contact" class="btn btn-primary svelte-1elxaub">Book a Call</a></div></div></nav></header>`);
+import { L as Linkedin } from "../../chunks/linkedin.js";
+function Header($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    $$renderer2.push(`<header class="sticky-header svelte-1elxaub"><nav class="container nav-bar svelte-1elxaub"><a href="/" class="logo-container svelte-1elxaub"><img src="/images/logo-full.png" alt="Strata Forge Technologies" class="logo-desktop svelte-1elxaub"/> <img src="/images/logo-full.png" alt="Strata Forge" class="logo-mobile svelte-1elxaub"/></a> <div class="menu-desktop svelte-1elxaub"><a href="/" class="svelte-1elxaub">Home</a> <a href="/services" class="svelte-1elxaub">Services</a> <a href="/how-we-work" class="svelte-1elxaub">Process</a> <a href="/portfolio" class="svelte-1elxaub">Portfolio</a> <a href="/about" class="svelte-1elxaub">About</a> <a${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" class="btn btn-primary svelte-1elxaub">WhatsApp Us</a></div> <button class="menu-toggle svelte-1elxaub" aria-label="Toggle menu"><div${attr_class(`hamburger ${stringify("")}`, "svelte-1elxaub")}><span class="svelte-1elxaub"></span> <span class="svelte-1elxaub"></span> <span class="svelte-1elxaub"></span></div></button> <div${attr_class(`menu-mobile-overlay ${stringify("")}`, "svelte-1elxaub")}><div class="menu-mobile-content svelte-1elxaub"><a href="/" class="svelte-1elxaub">Home</a> <a href="/services" class="svelte-1elxaub">Services</a> <a href="/how-we-work" class="svelte-1elxaub">Process</a> <a href="/portfolio" class="svelte-1elxaub">Portfolio</a> <a href="/about" class="svelte-1elxaub">About</a> <a${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" class="btn btn-primary svelte-1elxaub">WhatsApp Us</a></div></div></nav></header>`);
+  });
 }
 function Facebook($$renderer, $$props) {
   const $$sanitized_props = sanitize_props($$props);
@@ -88,32 +92,30 @@ function Instagram($$renderer, $$props) {
     }
   ]));
 }
-function Linkedin($$renderer, $$props) {
+function Message_circle($$renderer, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const iconNode = [
     [
       "path",
       {
-        "d": "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+        "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
       }
-    ],
-    ["rect", { "width": "4", "height": "12", "x": "2", "y": "9" }],
-    ["circle", { "cx": "4", "cy": "4", "r": "2" }]
+    ]
   ];
   Icon($$renderer, spread_props([
-    { name: "linkedin" },
+    { name: "message-circle" },
     $$sanitized_props,
     {
       /**
-       * @component @name Linkedin
+       * @component @name MessageCircle
        * @description Lucide SVG icon component, renders SVG Element with children.
        *
-       * @preview ![img](data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHdpZHRoPSIyNCIKICBoZWlnaHQ9IjI0IgogIHZpZXdCb3g9IjAgMCAyNCAyNCIKICBmaWxsPSJub25lIgogIHN0cm9rZT0iIzAwMCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDJweCIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cGF0aCBkPSJNMTYgOGE2IDYgMCAwIDEgNiA2djdoLTR2LTdhMiAyIDAgMCAwLTItMiAyIDIgMCAwIDAtMiAydjdoLTR2LTdhNiA2IDAgMCAxIDYtNnoiIC8+CiAgPHJlY3Qgd2lkdGg9IjQiIGhlaWdodD0iMTIiIHg9IjIiIHk9IjkiIC8+CiAgPGNpcmNsZSBjeD0iNCIgY3k9IjQiIHI9IjIiIC8+Cjwvc3ZnPgo=) - https://lucide.dev/icons/linkedin
+       * @preview ![img](data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHdpZHRoPSIyNCIKICBoZWlnaHQ9IjI0IgogIHZpZXdCb3g9IjAgMCAyNCAyNCIKICBmaWxsPSJub25lIgogIHN0cm9rZT0iIzAwMCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDJweCIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cGF0aCBkPSJNMi45OTIgMTYuMzQyYTIgMiAwIDAgMSAuMDk0IDEuMTY3bC0xLjA2NSAzLjI5YTEgMSAwIDAgMCAxLjIzNiAxLjE2OGwzLjQxMy0uOTk4YTIgMiAwIDAgMSAxLjA5OS4wOTIgMTAgMTAgMCAxIDAtNC43NzctNC43MTkiIC8+Cjwvc3ZnPgo=) - https://lucide.dev/icons/message-circle
        * @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
        *
        * @param {Object} props - Lucide icons props and any valid SVG attribute
        * @returns {FunctionalComponent} Svelte component
-       * @deprecated Brand icons have been deprecated and are due to be removed, please refer to https://github.com/lucide-icons/lucide/issues/670. We recommend using https://simpleicons.org/?q=linkedin instead. This icon will be removed in v1.0
+       *
        */
       iconNode,
       children: ($$renderer2) => {
@@ -134,7 +136,14 @@ function Footer($$renderer, $$props) {
     Instagram($$renderer2, { size: 20 });
     $$renderer2.push(`<!----></a> <a href="https://www.linkedin.com/company/strataforgetechnologies/" target="_blank" aria-label="LinkedIn" class="svelte-jz8lnl">`);
     Linkedin($$renderer2, { size: 20 });
-    $$renderer2.push(`<!----></a></div></div> <div class="footer-links svelte-jz8lnl"><h4 class="svelte-jz8lnl">Quick Links</h4> <a href="/" class="svelte-jz8lnl">Home</a> <a href="/services" class="svelte-jz8lnl">Services</a> <a href="/portfolio" class="svelte-jz8lnl">Portfolio</a> <a href="/about" class="svelte-jz8lnl">About</a> <a href="/contact" class="svelte-jz8lnl">Contact</a></div> <div class="footer-services svelte-jz8lnl"><h4 class="svelte-jz8lnl">Services</h4> <a href="/services#systems-dev" class="svelte-jz8lnl">Websites &amp; Web Apps</a> <a href="/services#brand-design" class="svelte-jz8lnl">Brand &amp; UI/UX Design</a> <a href="/services#marketing-growth" class="svelte-jz8lnl">Digital Campaigns</a></div> <div class="footer-contact svelte-jz8lnl"><h4 class="svelte-jz8lnl">Get in Touch</h4> <p class="svelte-jz8lnl">Lusaka, Zambia</p> <p class="svelte-jz8lnl">+260979082676</p> <a href="mailto:strataforgetechnologies@gmail.com" class="svelte-jz8lnl">strataforgetechnologies@gmail.com</a></div></div> <div class="container footer-bottom svelte-jz8lnl"><p class="svelte-jz8lnl">© ${escape_html(currentYear)} Strata Forge Technologies Limited. All rights reserved.</p></div></footer>`);
+    $$renderer2.push(`<!----></a></div></div> <div class="footer-links svelte-jz8lnl"><h4 class="svelte-jz8lnl">Quick Links</h4> <a href="/" class="svelte-jz8lnl">Home</a> <a href="/services" class="svelte-jz8lnl">Services</a> <a href="/portfolio" class="svelte-jz8lnl">Portfolio</a> <a href="/about" class="svelte-jz8lnl">About</a> <a href="/contact" class="svelte-jz8lnl">Contact</a></div> <div class="footer-services svelte-jz8lnl"><h4 class="svelte-jz8lnl">Services</h4> <a href="/services#systems-dev" class="svelte-jz8lnl">Websites &amp; Web Apps</a> <a href="/services#brand-design" class="svelte-jz8lnl">Brand &amp; UI/UX Design</a> <a href="/services#marketing-growth" class="svelte-jz8lnl">Digital Campaigns</a></div> <div class="footer-contact svelte-jz8lnl"><h4 class="svelte-jz8lnl">Get in Touch</h4> <p class="svelte-jz8lnl">Lusaka, Zambia</p> <p class="svelte-jz8lnl">+260979082676</p> <a href="mailto:strataforgetechnologies@gmail.com" class="svelte-jz8lnl">strataforgetechnologies@gmail.com</a></div></div> <div class="container footer-bottom svelte-jz8lnl"><p class="svelte-jz8lnl">© ${escape_html(currentYear)} Strata Forge Technologies Limited. All rights reserved.</p> <p class="footer-registration svelte-jz8lnl">Registered in Zambia · PACRA No. ${escape_html(PACRA_NUMBER)}</p></div></footer>`);
+  });
+}
+function WhatsAppFab($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    $$renderer2.push(`<a class="wa-fab svelte-13mh5lv"${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><span class="wa-icon svelte-13mh5lv" aria-hidden="true">`);
+    Message_circle($$renderer2, { size: 24, strokeWidth: 2.25 });
+    $$renderer2.push(`<!----></span> <span class="wa-label svelte-13mh5lv">Chat with us</span></a>`);
   });
 }
 function _layout($$renderer, $$props) {
@@ -145,6 +154,8 @@ function _layout($$renderer, $$props) {
   children($$renderer);
   $$renderer.push(`<!----></main> `);
   Footer($$renderer);
+  $$renderer.push(`<!----> `);
+  WhatsAppFab($$renderer);
   $$renderer.push(`<!----></div>`);
 }
 export {

@@ -1,0 +1,1 @@
+import{x as o,i}from"./DS8MaRUs.js";function c(r,e,s){o(()=>{var t=i(()=>e(r,s?.())||{});if(t?.destroy)return()=>t.destroy()})}function f(r){let e;const s=t=>{t.forEach(n=>{n.isIntersecting&&r.classList.add("in-view")})};return e=new IntersectionObserver(s,{root:null,rootMargin:"0px",threshold:.15}),e.observe(r),{destroy(){e&&e.unobserve(r)}}}export{c as a,f as i};

@@ -1,4 +1,4 @@
-import { y as sanitize_props, J as rest_props, K as attributes, N as clsx, G as ensure_array_like, O as element, F as slot, P as bind_props } from "./index.js";
+import { z as sanitize_props, K as rest_props, N as attributes, O as clsx, J as ensure_array_like, P as element, G as slot, Q as bind_props } from "./index.js";
 import { l as fallback } from "./context.js";
 const defaultAttributes = {
   xmlns: "http://www.w3.org/2000/svg",

@@ -1,5 +1,24 @@
 <script>
+    import { Linkedin, BadgeCheck } from "lucide-svelte";
     import { inView } from "$lib/actions/inView.js";
+    import ClientLogos from "$lib/components/ClientLogos.svelte";
+    import { PACRA_NUMBER } from "$lib/siteConfig.js";
+
+    // TODO: Replace with real founder content
+    const founder = {
+        name: 'Innocent Manda',
+        role: 'Founder & Backend Architect',
+        photo: '/images/founder-innocent.jpg', // TODO: replace with [FOUNDER_PHOTO]
+        bio: "[FOUNDER_BIO] — replace with Innocent's 3–4 sentence personal story. e.g. 'I've spent the last X years building digital systems and brand experiences for Zambian businesses...'",
+        linkedin: 'https://www.linkedin.com/in/innocent-manda-80b48b187/'
+    };
+
+    // TODO: Replace stat numbers with real values
+    const stats = [
+        { number: '[X]+', label: 'Projects Delivered' },
+        { number: '[X]+', label: 'Zambian Clients' },
+        { number: '[X]+', label: 'Years Building' }
+    ];
 </script>
 
 <div class="about-page">
@@ -27,6 +46,11 @@
                     functional. Our remote-first approach allows us to serve
                     clients across the region with agility and precision.
                 </p>
+                <!-- TODO: Replace [PACRA_NUMBER] in src/lib/siteConfig.js -->
+                <div class="legit-badge">
+                    <BadgeCheck size={18} />
+                    <span>Registered Zambian Company &middot; PACRA No. {PACRA_NUMBER}</span>
+                </div>
             </div>
             <div class="story-visual">
                 <img
@@ -42,21 +66,39 @@
         <div class="container text-center fade-up-element" use:inView>
             <h2 class="mb-6">The Minds Behind the Forge</h2>
             <div class="founder-card glass-panel fade-up-element delay-100" use:inView>
-                <div class="avatar"></div>
-                <h3>Innocent Manda</h3>
-                <p
-                    class="text-primary"
-                    style="color: var(--color-primary); font-weight: 600"
+                <!-- TODO: Replace [FOUNDER_PHOTO] in script -->
+                <div class="founder-photo">
+                    <img src={founder.photo} alt={founder.name} />
+                </div>
+                <h3>{founder.name}</h3>
+                <p class="founder-role">{founder.role}</p>
+                <!-- TODO: Replace [FOUNDER_BIO] in script -->
+                <p class="founder-bio">{founder.bio}</p>
+
+                <a
+                    class="linkedin-link"
+                    href={founder.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Founder & Backend Architect
-                </p>
-                <p class="small mt-2" style="font-size: 0.85rem">
-                    Development, Design, and Strategy lead for Zambian and
-                    regional projects.
-                </p>
+                    <Linkedin size={16} />
+                    <span>Connect on LinkedIn →</span>
+                </a>
+
+                <!-- TODO: Replace stat numbers in script -->
+                <div class="stats-row">
+                    {#each stats as s}
+                        <div class="stat">
+                            <span class="stat-number">{s.number}</span>
+                            <span class="stat-label">{s.label}</span>
+                        </div>
+                    {/each}
+                </div>
             </div>
         </div>
     </section>
+
+    <ClientLogos />
 </div>
 
 <style>
@@ -90,14 +132,29 @@
         }
     }
 
+    .legit-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 24px;
+        padding: 10px 16px;
+        background: rgba(32, 53, 144, 0.06);
+        border: 1px solid rgba(32, 53, 144, 0.16);
+        border-radius: 999px;
+        color: var(--color-primary);
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
     .founder-card {
         padding: 40px;
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-sm);
-        max-width: 400px;
+        max-width: 560px;
         margin: 0 auto;
         transition: var(--transition-smooth);
-        border: 1px solid rgba(0,0,0,0.03);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        text-align: center;
     }
 
     .founder-card:hover {
@@ -105,12 +162,94 @@
         box-shadow: var(--shadow-md);
     }
 
-    .avatar {
-        width: 80px;
-        height: 80px;
+    .founder-photo {
+        width: 140px;
+        height: 140px;
+        border-radius: 28px;
+        overflow: hidden;
+        margin: 0 auto 24px;
         background: var(--color-secondary);
-        border-radius: 50%;
+        box-shadow: 0 12px 32px rgba(32, 53, 144, 0.18);
+        transform: rotate(-2deg);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .founder-card:hover .founder-photo {
+        transform: rotate(0);
+    }
+
+    .founder-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .founder-role {
+        color: var(--color-primary);
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .founder-bio {
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        line-height: 1.65;
         margin-bottom: 24px;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .linkedin-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border: 1px solid rgba(32, 53, 144, 0.25);
+        border-radius: 999px;
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+
+    .linkedin-link:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+        border-color: var(--color-primary);
+        transform: translateY(-2px);
+    }
+
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .stat-number {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--color-primary);
+        line-height: 1.1;
+    }
+
+    .stat-label {
+        font-size: 0.78rem;
+        color: var(--color-text-muted);
+        font-weight: 500;
+        line-height: 1.3;
     }
 
     .story-visual {

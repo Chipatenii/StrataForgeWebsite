@@ -1,6 +1,7 @@
-import "clsx";
-import { G as Globe, P as Pencil_ruler } from "../../../chunks/pencil-ruler.js";
-import { y as sanitize_props, z as spread_props, F as slot } from "../../../chunks/index.js";
+import { z as sanitize_props, F as spread_props, G as slot, w as attr } from "../../../chunks/index.js";
+import { j as escape_html } from "../../../chunks/context.js";
+import { w as whatsappUrl } from "../../../chunks/siteConfig.js";
+import { G as Globe, P as Pencil_ruler, M as Megaphone } from "../../../chunks/pencil-ruler.js";
 import { I as Icon } from "../../../chunks/Icon.js";
 function Award($$renderer, $$props) {
   const $$sanitized_props = sanitize_props($$props);
@@ -38,6 +39,39 @@ function Award($$renderer, $$props) {
     }
   ]));
 }
+function Chart_column($$renderer, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  const iconNode = [
+    ["path", { "d": "M3 3v16a2 2 0 0 0 2 2h16" }],
+    ["path", { "d": "M18 17V9" }],
+    ["path", { "d": "M13 17V5" }],
+    ["path", { "d": "M8 17v-3" }]
+  ];
+  Icon($$renderer, spread_props([
+    { name: "chart-column" },
+    $$sanitized_props,
+    {
+      /**
+       * @component @name ChartColumn
+       * @description Lucide SVG icon component, renders SVG Element with children.
+       *
+       * @preview ![img](data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHdpZHRoPSIyNCIKICBoZWlnaHQ9IjI0IgogIHZpZXdCb3g9IjAgMCAyNCAyNCIKICBmaWxsPSJub25lIgogIHN0cm9rZT0iIzAwMCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDJweCIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cGF0aCBkPSJNMyAzdjE2YTIgMiAwIDAgMCAyIDJoMTYiIC8+CiAgPHBhdGggZD0iTTE4IDE3VjkiIC8+CiAgPHBhdGggZD0iTTEzIDE3VjUiIC8+CiAgPHBhdGggZD0iTTggMTd2LTMiIC8+Cjwvc3ZnPgo=) - https://lucide.dev/icons/chart-column
+       * @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
+       *
+       * @param {Object} props - Lucide icons props and any valid SVG attribute
+       * @returns {FunctionalComponent} Svelte component
+       *
+       */
+      iconNode,
+      children: ($$renderer2) => {
+        $$renderer2.push(`<!--[-->`);
+        slot($$renderer2, $$props, "default", {});
+        $$renderer2.push(`<!--]-->`);
+      },
+      $$slots: { default: true }
+    }
+  ]));
+}
 function Database($$renderer, $$props) {
   const $$sanitized_props = sanitize_props($$props);
   const iconNode = [
@@ -54,6 +88,38 @@ function Database($$renderer, $$props) {
        * @description Lucide SVG icon component, renders SVG Element with children.
        *
        * @preview ![img](data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHdpZHRoPSIyNCIKICBoZWlnaHQ9IjI0IgogIHZpZXdCb3g9IjAgMCAyNCAyNCIKICBmaWxsPSJub25lIgogIHN0cm9rZT0iIzAwMCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDJweCIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8ZWxsaXBzZSBjeD0iMTIiIGN5PSI1IiByeD0iOSIgcnk9IjMiIC8+CiAgPHBhdGggZD0iTTMgNVYxOUE5IDMgMCAwIDAgMjEgMTlWNSIgLz4KICA8cGF0aCBkPSJNMyAxMkE5IDMgMCAwIDAgMjEgMTIiIC8+Cjwvc3ZnPgo=) - https://lucide.dev/icons/database
+       * @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
+       *
+       * @param {Object} props - Lucide icons props and any valid SVG attribute
+       * @returns {FunctionalComponent} Svelte component
+       *
+       */
+      iconNode,
+      children: ($$renderer2) => {
+        $$renderer2.push(`<!--[-->`);
+        slot($$renderer2, $$props, "default", {});
+        $$renderer2.push(`<!--]-->`);
+      },
+      $$slots: { default: true }
+    }
+  ]));
+}
+function Target($$renderer, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  const iconNode = [
+    ["circle", { "cx": "12", "cy": "12", "r": "10" }],
+    ["circle", { "cx": "12", "cy": "12", "r": "6" }],
+    ["circle", { "cx": "12", "cy": "12", "r": "2" }]
+  ];
+  Icon($$renderer, spread_props([
+    { name: "target" },
+    $$sanitized_props,
+    {
+      /**
+       * @component @name Target
+       * @description Lucide SVG icon component, renders SVG Element with children.
+       *
+       * @preview ![img](data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogIHdpZHRoPSIyNCIKICBoZWlnaHQ9IjI0IgogIHZpZXdCb3g9IjAgMCAyNCAyNCIKICBmaWxsPSJub25lIgogIHN0cm9rZT0iIzAwMCIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDJweCIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIgLz4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI2IiAvPgogIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjIiIC8+Cjwvc3ZnPgo=) - https://lucide.dev/icons/target
        * @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
        *
        * @param {Object} props - Lucide icons props and any valid SVG attribute
@@ -117,27 +183,43 @@ function Webhook($$renderer, $$props) {
     }
   ]));
 }
-function _page($$renderer) {
-  $$renderer.push(`<div class="services-page"><section class="page-intro bg-none svelte-4z030h" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('/images/services_banner.png'); background-size: cover; background-position: center; color: white;"><div class="container text-center fade-up-element"><h1 style="color: white;" class="svelte-4z030h">Core Systems. Premium Design.</h1> <p class="large-text svelte-4z030h" style="color: rgba(255, 255, 255, 0.9);">Digital systems and design are the core of what we do. Growth
+function _page($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    const pricing = {
+      systems: "Business Websites from K8,500",
+      brand: "Brand Identity Packages from K4,500",
+      growth: "Custom Web Apps from K18,000"
+    };
+    $$renderer2.push(`<div class="services-page"><section class="page-intro bg-none svelte-4z030h" style="background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('/images/services_banner.png'); background-size: cover; background-position: center; color: white;"><div class="container text-center fade-up-element"><h1 style="color: white;" class="svelte-4z030h">Core Systems. Premium Design.</h1> <p class="large-text svelte-4z030h" style="color: rgba(255, 255, 255, 0.9);">Digital systems and design are the core of what we do. Growth
                 marketing is the engine that drives it all forward.</p></div></section> <section id="systems-dev" class="service-detail svelte-4z030h"><div class="container fade-up-element"><h2 class="section-title">Systems &amp; Development</h2> <div class="service-items-grid svelte-4z030h"><div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
-  Globe($$renderer, { size: 28 });
-  $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">Business Websites</h4> <p class="svelte-4z030h">Fast, mobile-optimized, and built for SEO. Every pixel
+    Globe($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">Business Websites</h4> <p class="svelte-4z030h">Fast, mobile-optimized, and built for SEO. Every pixel
                         is designed to convert visitors into clients.</p></div> <div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
-  Database($$renderer, { size: 28 });
-  $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">Web Apps &amp; Internal Tools</h4> <p class="svelte-4z030h">From client portals to lightweight ERPs, we build the
+    Database($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">Web Apps &amp; Internal Tools</h4> <p class="svelte-4z030h">From client portals to lightweight ERPs, we build the
                         software that runs your business.</p></div> <div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
-  Webhook($$renderer, { size: 28 });
-  $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">APIs &amp; Automations</h4> <p class="svelte-4z030h">Connect payment gateways (DPO, Airtel, MTN) and automate
-                        repetitive tasks.</p></div></div></div></section> <section id="brand-design" class="service-detail bg-neutral svelte-4z030h"><div class="container fade-up-element"><h2 class="section-title">Brand &amp; Design</h2> <div class="service-items-grid svelte-4z030h"><div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
-  Award($$renderer, { size: 28 });
-  $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">Brand Identity</h4> <p class="svelte-4z030h">Logos, color systems, and brand guides that define how
+    Webhook($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">APIs &amp; Automations</h4> <p class="svelte-4z030h">Connect payment gateways (DPO, Airtel, MTN) and automate
+                        repetitive tasks.</p></div></div> <div class="price-anchor svelte-4z030h"><span class="price-icon svelte-4z030h" aria-hidden="true">💡</span> <span class="price-text svelte-4z030h">${escape_html(pricing.systems)}</span> <span class="price-sep svelte-4z030h">·</span> <span class="price-cta svelte-4z030h">Custom quotes available — <a${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" class="svelte-4z030h">chat with us on WhatsApp</a></span></div></div></section> <section id="brand-design" class="service-detail bg-neutral svelte-4z030h"><div class="container fade-up-element"><h2 class="section-title">Brand &amp; Design</h2> <div class="service-items-grid svelte-4z030h"><div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
+    Award($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">Brand Identity</h4> <p class="svelte-4z030h">Logos, color systems, and brand guides that define how
                         the world sees you.</p></div> <div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
-  Pencil_ruler($$renderer, { size: 28 });
-  $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">Marketing Collateral</h4> <p class="svelte-4z030h">Company profiles and social templates that maintain your
+    Pencil_ruler($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">Marketing Collateral</h4> <p class="svelte-4z030h">Company profiles and social templates that maintain your
                         premium edge.</p></div> <div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
-  Pencil_ruler($$renderer, { size: 28 });
-  $$renderer.push(`<!----></div> <h4 class="svelte-4z030h">UI/UX Design</h4> <p class="svelte-4z030h">Human-centered wireframes and hi-fi prototypes built for
-                        clarity.</p></div></div></div></section> <section class="service-cta svelte-4z030h"><div class="container text-center fade-up-element"><h3>Not sure where to start?</h3> <p class="mb-4">Book a quick call and we’ll map it with you.</p> <a href="/contact" class="btn btn-primary">Schedule Discovery Call</a></div></section></div>`);
+    Pencil_ruler($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">UI/UX Design</h4> <p class="svelte-4z030h">Human-centered wireframes and hi-fi prototypes built for
+                        clarity.</p></div></div> <div class="price-anchor svelte-4z030h"><span class="price-icon svelte-4z030h" aria-hidden="true">💡</span> <span class="price-text svelte-4z030h">${escape_html(pricing.brand)}</span> <span class="price-sep svelte-4z030h">·</span> <span class="price-cta svelte-4z030h">Custom quotes available — <a${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" class="svelte-4z030h">chat with us on WhatsApp</a></span></div></div></section> <section id="marketing-growth" class="service-detail svelte-4z030h"><div class="container fade-up-element"><h2 class="section-title">Digital Growth</h2> <div class="service-items-grid svelte-4z030h"><div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
+    Megaphone($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">Paid Campaigns</h4> <p class="svelte-4z030h">Strategic Meta, Google, and TikTok ads tuned to convert
+                        Zambian and regional audiences.</p></div> <div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
+    Target($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">SEO &amp; Content</h4> <p class="svelte-4z030h">Search-friendly content and on-page SEO that lifts you
+                        above local competitors.</p></div> <div class="item glass-panel svelte-4z030h"><div class="icon-wrapper svelte-4z030h">`);
+    Chart_column($$renderer2, { size: 28 });
+    $$renderer2.push(`<!----></div> <h4 class="svelte-4z030h">Analytics &amp; Reporting</h4> <p class="svelte-4z030h">Clear monthly reports tied to revenue, leads, and the
+                        decisions that grow your business.</p></div></div> <div class="price-anchor svelte-4z030h"><span class="price-icon svelte-4z030h" aria-hidden="true">💡</span> <span class="price-text svelte-4z030h">${escape_html(pricing.growth)}</span> <span class="price-sep svelte-4z030h">·</span> <span class="price-cta svelte-4z030h">Custom quotes available — <a${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" class="svelte-4z030h">chat with us on WhatsApp</a></span></div></div></section> <section class="service-cta svelte-4z030h"><div class="container text-center fade-up-element"><h3>Not sure where to start?</h3> <p class="mb-4">Send us a message and we’ll map it with you.</p> <a${attr("href", whatsappUrl())} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Chat on WhatsApp</a></div></section></div>`);
+  });
 }
 export {
   _page as default
