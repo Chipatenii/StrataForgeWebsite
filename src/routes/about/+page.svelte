@@ -8,7 +8,7 @@
     const founder = {
         name: 'Innocent Manda',
         role: 'Founder & Backend Architect',
-        photo: '/images/founder-innocent.jpg', // TODO: replace with [FOUNDER_PHOTO]
+        photo: '/images/innocent_manda.jpg',
         bio: "[FOUNDER_BIO] — replace with Innocent's 3–4 sentence personal story. e.g. 'I've spent the last X years building digital systems and brand experiences for Zambian businesses...'",
         linkedin: 'https://www.linkedin.com/in/innocent-manda-80b48b187/'
     };
