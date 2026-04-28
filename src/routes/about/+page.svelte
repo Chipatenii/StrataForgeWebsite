@@ -4,20 +4,18 @@
     import ClientLogos from "$lib/components/ClientLogos.svelte";
     import { PACRA_NUMBER } from "$lib/siteConfig.js";
 
-    // TODO: Replace with real founder content
     const founder = {
         name: 'Innocent Manda',
         role: 'Founder & Backend Architect',
-        photo: '/images/innocent_manda.jpg',
-        bio: "[FOUNDER_BIO] — replace with Innocent's 3–4 sentence personal story. e.g. 'I've spent the last X years building digital systems and brand experiences for Zambian businesses...'",
+        photo: '/images/innocent_manda.jpeg',
+        bio: "I've spent the last several years building software systems, digital infrastructure, and growth-driven solutions for ambitious businesses in Zambia and beyond. My journey started with a passion for design and technology, but evolved into a deeper mission: helping companies transform ideas into scalable engines of success. As the founder of Strata Forge Technologies, I focus on backend architecture, automation, and modern digital solutions that strengthen how businesses operate and grow. I believe strong companies are forged through bold vision, reliable systems, and relentless execution.",
         linkedin: 'https://www.linkedin.com/in/innocent-manda-80b48b187/'
     };
 
-    // TODO: Replace stat numbers with real values
     const stats = [
-        { number: '[X]+', label: 'Projects Delivered' },
-        { number: '[X]+', label: 'Zambian Clients' },
-        { number: '[X]+', label: 'Years Building' }
+        { number: '20+', label: 'Projects Delivered' },
+        { number: '30+', label: 'Clients Served' },
+        { number: '4+',  label: 'Years Building' }
     ];
 </script>
 

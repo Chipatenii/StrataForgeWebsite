@@ -76,14 +76,11 @@
         width: auto;
         height: auto;
         object-fit: contain;
-        filter: grayscale(100%);
-        opacity: 0.6;
-        transition: filter 0.3s ease, opacity 0.3s ease;
+        transition: transform 0.3s ease;
     }
 
     .logo-item:hover img {
-        filter: grayscale(0%);
-        opacity: 1;
+        transform: scale(1.05);
     }
 
     .marquee {
