@@ -44,16 +44,14 @@ function _page($$renderer) {
   const founder = {
     name: "Innocent Manda",
     role: "Founder & Backend Architect",
-    photo: "/images/founder-innocent.jpg",
-    // TODO: replace with [FOUNDER_PHOTO]
-    bio: "[FOUNDER_BIO] — replace with Innocent's 3–4 sentence personal story. e.g. 'I've spent the last X years building digital systems and brand experiences for Zambian businesses...'",
-    linkedin: "https://www.linkedin.com/in/"
-    // TODO: replace with [FOUNDER_LINKEDIN]
+    photo: "/images/innocent_manda.jpeg",
+    bio: "I've spent the last several years building software systems, digital infrastructure, and growth-driven solutions for ambitious businesses in Zambia and beyond. My journey started with a passion for design and technology, but evolved into a deeper mission: helping companies transform ideas into scalable engines of success. As the founder of Strata Forge Technologies, I focus on backend architecture, automation, and modern digital solutions that strengthen how businesses operate and grow. I believe strong companies are forged through bold vision, reliable systems, and relentless execution.",
+    linkedin: "https://www.linkedin.com/in/innocent-manda-80b48b187/"
   };
   const stats = [
-    { number: "[X]+", label: "Projects Delivered" },
-    { number: "[X]+", label: "Zambian Clients" },
-    { number: "[X]+", label: "Years Building" }
+    { number: "20+", label: "Projects Delivered" },
+    { number: "30+", label: "Clients Served" },
+    { number: "4+", label: "Years Building" }
   ];
   $$renderer.push(`<div class="about-page"><section class="page-intro svelte-cwls5q" style="background: linear-gradient(rgba(32, 53, 144, 0.85), rgba(32, 53, 144, 0.95)), url('/images/services_banner.png'); background-size: cover; background-position: center;"><div class="container text-center fade-up-element"><h1 style="color: white; margin-bottom: 24px;" class="svelte-cwls5q">About Strata Forge</h1> <p class="large-text svelte-cwls5q" style="color: rgba(255, 255, 255, 0.9);">A dev-and-design-first company based in Lusaka, Zambia. We build
                 the digital backbone for modern businesses.</p></div></section> <section class="story"><div class="container story-grid fade-up-element svelte-cwls5q"><div><h2 class="mb-3">Where we started</h2> <p>Born from the intersection of technology and creativity,

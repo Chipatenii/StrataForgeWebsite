@@ -9,9 +9,9 @@
       "_environment.js"
     ]
   },
-  "_ClientLogos.B4TmtV73.css": {
-    "file": "_app/immutable/assets/ClientLogos.B4TmtV73.css",
-    "src": "_ClientLogos.B4TmtV73.css"
+  "_ClientLogos.DBDhduBc.css": {
+    "file": "_app/immutable/assets/ClientLogos.DBDhduBc.css",
+    "src": "_ClientLogos.DBDhduBc.css"
   },
   "_ClientLogos.js": {
     "file": "chunks/ClientLogos.js",
@@ -20,7 +20,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/ClientLogos.B4TmtV73.css"
+      "_app/immutable/assets/ClientLogos.DBDhduBc.css"
     ]
   },
   "_FAQ.ijyvlFkV.css": {

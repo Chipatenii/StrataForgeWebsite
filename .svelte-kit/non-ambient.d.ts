@@ -41,6 +41,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/how-we-work" | "/how-we-work/" | "/portfolio" | "/portfolio/" | "/services" | "/services/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/assets/about-story.png" | "/assets/hero-visual.png" | "/assets/logo-mark.png" | "/assets/primary-logo.png" | "/assets/services-banner.png" | "/images/about_visual.png" | "/images/clients/aaspa.png" | "/images/clients/flamingo-consultancy.png" | "/images/clients/geonsi-engineering.png" | "/images/clients/sekoma.png" | "/images/clients/unstolic-resources.png" | "/images/favicon.png" | "/images/hero_visual.png" | "/images/logo-full.png" | "/images/services_banner.png" | string & {};
+		Asset(): "/assets/about-story.png" | "/assets/hero-visual.png" | "/assets/logo-mark.png" | "/assets/primary-logo.png" | "/assets/services-banner.png" | "/images/about_visual.png" | "/images/clients/aaspa.png" | "/images/clients/flamingo-consultancy.png" | "/images/clients/geonsi-engineering.png" | "/images/clients/sekoma.png" | "/images/clients/unstolic-resources.png" | "/images/favicon.png" | "/images/hero_visual.png" | "/images/innocent_manda.jpeg" | "/images/logo-full.png" | "/images/services_banner.png" | string & {};
 	}
 }

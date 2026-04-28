@@ -1,6 +1,7 @@
 <script>
     import { Linkedin, BadgeCheck } from "lucide-svelte";
     import { inView } from "$lib/actions/inView.js";
+    import { countUp } from "$lib/actions/countUp.js";
     import ClientLogos from "$lib/components/ClientLogos.svelte";
     import { PACRA_NUMBER } from "$lib/siteConfig.js";
 
@@ -83,11 +84,10 @@
                     <span>Connect on LinkedIn →</span>
                 </a>
 
-                <!-- TODO: Replace stat numbers in script -->
                 <div class="stats-row">
                     {#each stats as s}
                         <div class="stat">
-                            <span class="stat-number">{s.number}</span>
+                            <span class="stat-number" use:countUp={s.number}>{s.number}</span>
                             <span class="stat-label">{s.label}</span>
                         </div>
                     {/each}

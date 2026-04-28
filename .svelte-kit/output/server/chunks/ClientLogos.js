@@ -1,10 +1,10 @@
 import { J as ensure_array_like, w as attr } from "./index.js";
 const clients = [
-  { name: "[CLIENT_LOGO_1_NAME]", img: "/images/clients/client-1.png" },
-  { name: "[CLIENT_LOGO_2_NAME]", img: "/images/clients/client-2.png" },
-  { name: "[CLIENT_LOGO_3_NAME]", img: "/images/clients/client-3.png" },
-  { name: "[CLIENT_LOGO_4_NAME]", img: "/images/clients/client-4.png" },
-  { name: "[CLIENT_LOGO_5_NAME]", img: "/images/clients/client-5.png" }
+  { name: "AASPA — Beauty, Wellness, Aesthetics", img: "/images/clients/aaspa.png" },
+  { name: "Flamingo Consultancy", img: "/images/clients/flamingo-consultancy.png" },
+  { name: "Geonsi Engineering Ltd", img: "/images/clients/geonsi-engineering.png" },
+  { name: "Sekoma", img: "/images/clients/sekoma.png" },
+  { name: "Unstolic Resources", img: "/images/clients/unstolic-resources.png" }
 ];
 function ClientLogos($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
