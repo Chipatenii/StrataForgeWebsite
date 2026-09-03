@@ -1,179 +1,165 @@
 <script>
-    import { Linkedin, Facebook, Instagram } from "lucide-svelte";
-    import { PACRA_NUMBER } from "$lib/siteConfig.js";
+    import { Linkedin, Facebook, Instagram } from 'lucide-svelte';
+    import { PACRA_NUMBER } from '$lib/siteConfig.js';
+    import { consent } from '$lib/stores/consent.js';
+
     const currentYear = new Date().getFullYear();
+    const hasPacra = PACRA_NUMBER && !PACRA_NUMBER.includes('[');
 </script>
 
-<footer class="footer bg-neutral">
+<footer class="footer">
     <div class="container footer-grid">
         <div class="footer-brand">
             <img src="/images/logo-full.png" alt="Strata Forge Technologies" class="footer-logo" />
-            <p class="footer-tagline">Systems | Design | Marketing</p>
+            <p class="footer-tagline">Simple solutions for everyday business problems. Systems, design, and growth under one roof.</p>
             <div class="footer-socials">
-                <a href="https://www.facebook.com/strataforgetechnologies/" target="_blank" aria-label="Facebook"><Facebook size={20} /></a>
-                <a href="https://www.instagram.com/strataforgetech/" target="_blank" aria-label="Instagram"><Instagram size={20} /></a>
-                <a href="https://www.linkedin.com/company/strataforgetechnologies/" target="_blank" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                <a href="https://www.facebook.com/strataforgetechnologies/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
+                <a href="https://www.instagram.com/strataforgetech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
+                <a href="https://www.linkedin.com/company/strataforgetechnologies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             </div>
         </div>
 
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+        <div class="footer-col">
+            <h4>Studio</h4>
+            <a href="/#work">Work</a>
+            <a href="/#studio">Studio</a>
+            <a href="/#process">Process</a>
+            <a href="/academy">Academy</a>
         </div>
 
-        <div class="footer-services">
-            <h4>Services</h4>
-            <a href="/services#systems-dev">Websites & Web Apps</a>
-            <a href="/services#brand-design">Brand & UI/UX Design</a>
-            <a href="/services#marketing-growth">Digital Campaigns</a>
-        </div>
-
-        <div class="footer-contact">
-            <h4>Get in Touch</h4>
-            <p>Lusaka, Zambia</p>
-            <p>+260979082676</p>
+        <div class="footer-col">
+            <h4>Contact</h4>
             <a href="mailto:strataforgetechnologies@gmail.com">strataforgetechnologies@gmail.com</a>
+            <a href="https://wa.me/260979082676" target="_blank" rel="noopener noreferrer">+260 979 082 676</a>
+            <span class="footer-note">Remote, Zambia and worldwide</span>
+            <span class="footer-note">Lusaka, Zambia</span>
+        </div>
+
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="/terms">Terms &amp; Conditions</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/refund-policy">Refund Policy</a>
+            <a href="/cookies">Cookie Policy</a>
+            <button type="button" class="footer-linkbtn" onclick={() => consent.reopen()}>Cookie Settings</button>
         </div>
     </div>
 
     <div class="container footer-bottom">
         <p>&copy; {currentYear} Strata Forge Technologies Limited. All rights reserved.</p>
-        <!-- TODO: Replace [PACRA_NUMBER] in src/lib/siteConfig.js -->
-        <p class="footer-registration">Registered in Zambia &middot; PACRA No. {PACRA_NUMBER}</p>
+        <p class="footer-registration">
+            {#if hasPacra}Registered in Zambia &middot; PACRA No. {PACRA_NUMBER} &middot; {/if}Rendered in real time &middot; WebGL
+        </p>
     </div>
 </footer>
 
 <style>
     .footer {
-        padding: 80px 24px 32px; 
-        background-color: var(--color-white); 
-        box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.02); /* Premium soft top shadow */
-        border-top: 1px solid rgba(0, 0, 0, 0.03);
+        padding: 80px 24px 36px;
+        background: var(--surface);
+        border-top: 1px solid var(--border);
     }
 
     .footer-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 48px;
-        margin-bottom: 80px;
+        gap: 44px;
+        margin-bottom: 64px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         .footer-grid {
-            grid-template-columns: 2fr 1fr 1fr 1.2fr; /* Adjusted proportions */
-            gap: 64px;
+            grid-template-columns: 2fr 1fr 1.4fr 1.2fr;
+            gap: 48px;
         }
     }
 
-    .footer-brand {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    .footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
 
-    .footer-logo {
-        height: 48px; /* Standardized with header */
-        width: auto;
-        margin-bottom: 20px;
-    }
+    .footer-logo { height: 40px; width: auto; margin-bottom: 18px; }
 
     .footer-tagline {
-        font-size: 1rem;
-        color: var(--color-text-muted);
-        margin-bottom: 32px;
-        max-width: 300px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+        max-width: 320px;
         line-height: 1.6;
     }
 
-    .footer-socials {
-        display: flex;
-        gap: 12px;
-    }
+    .footer-socials { display: flex; gap: 10px; }
 
     .footer-socials a {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 48px; /* Touch target increased for mobile */
-        height: 48px;
-        border-radius: 50%;
-        background: white;
-        color: var(--color-primary);
-        border: 1px solid rgba(0,0,0,0.05);
+        width: 42px;
+        height: 42px;
+        border-radius: var(--radius-full);
+        background: var(--surface-2);
+        color: var(--text-muted);
+        border: 1px solid var(--border);
         text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        transition: color 0.25s var(--ease-out), border-color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
     }
 
     .footer-socials a:hover {
+        color: var(--orange);
+        border-color: var(--border-orange);
         transform: translateY(-3px);
-        background: var(--color-primary);
-        color: white;
-        box-shadow: 0 4px 12px rgba(32, 53, 144, 0.2);
     }
 
-    .footer-grid h4 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin-bottom: 24px;
-        color: var(--color-text-main); /* Darker heading for contrast */
-        letter-spacing: -0.01em;
+    .footer-col { display: flex; flex-direction: column; gap: 14px; }
+
+    .footer-col h4 {
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-muted);
+        margin-bottom: 6px;
     }
 
-    .footer-links,
-    .footer-services,
-    .footer-contact {
-        display: flex;
-        flex-direction: column;
-        gap: 20px; /* Increased for better touch target spacing */
-    }
-
-    .footer-grid a {
+    .footer-col a,
+    .footer-linkbtn {
         text-decoration: none;
-        color: var(--color-text-muted);
+        color: var(--text);
         font-size: 0.95rem;
-        transition: all 0.2s ease;
+        transition: color 0.2s var(--ease-out);
+        background: none;
+        border: none;
+        padding: 0;
+        text-align: left;
+        cursor: pointer;
+        font-family: inherit;
     }
 
-    .footer-grid a:hover {
-        color: var(--color-primary);
-        padding-left: 6px; /* Subtle movement interaction */
+    .footer-col a:hover,
+    .footer-linkbtn:hover {
+        color: var(--orange);
     }
 
-    .footer-contact p {
-        font-size: 0.95rem;
-        color: var(--color-text-muted);
-        margin: 0;
-    }
-
-    .footer-contact a {
-        font-weight: 500;
-        color: var(--color-primary);
+    .footer-note {
+        font-size: 0.9rem;
+        color: var(--text-muted);
     }
 
     .footer-bottom {
-        border-top: 1px solid rgba(0, 0, 0, 0.08);
-        padding-top: 32px;
-        text-align: center;
+        border-top: 1px solid var(--border);
+        padding-top: 28px;
         display: flex;
         flex-direction: column;
         gap: 6px;
+        text-align: center;
     }
 
     .footer-bottom p {
-        font-size: 0.85rem;
-        color: var(--color-text-muted);
+        font-size: 0.82rem;
+        color: var(--text-muted);
     }
 
     .footer-registration {
-        font-size: 0.8rem;
-        color: var(--color-text-muted);
+        font-family: var(--font-mono);
+        letter-spacing: 0.04em;
         opacity: 0.8;
     }
 </style>

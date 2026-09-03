@@ -1,107 +1,72 @@
-// Strata Forge — portfolio entries
+// Strata Forge — real client work shown in the Work section.
 //
 // Schema:
 //   title:       string  — project / client name
-//   category:    'website' | 'branding' | 'flyer'
-//   thumbnail:   string  — image path (e.g. /images/portfolio/web-1.jpg)
+//   category:    string  — short category tag shown on the card
+//   result:      string  — one-line outcome
 //   description: string  — 1–2 sentence description of the work
-//   tags:        string[] — short tags
-//   link:        string | null — live URL (websites only)
+//   tags:        string[]
+//   link:        string | null — live URL
+//   logo:        string | null — client logo used as the card visual
+//   thumbnail:   string | null — optional screenshot (drop into static/images/portfolio/)
 //
-// TODO: Drop screenshot images into static/images/portfolio/ matching the
-// thumbnail filenames below. Recommended: 1200×800 JPG, ~150KB each.
+// To add a screenshot preview later, drop a 1200×800 image into
+// static/images/portfolio/ and set `thumbnail` to its path.
 
 export const portfolio = [
-    // WEBSITES
     {
         title: 'Sekoma Energy',
-        category: 'website',
-        thumbnail: '/images/portfolio/sekoma-energy.jpg',
-        description: 'Corporate site for a Zambian energy and resources company — built to communicate scale, sector expertise, and credibility to investors and partners.',
+        category: 'Website',
+        result: 'A credibility-first site for investors and partners.',
+        description:
+            'Corporate site for a Zambian energy and resources company, built to communicate scale, sector expertise, and credibility.',
         tags: ['Energy', 'Corporate', 'Lusaka'],
-        link: 'https://sekomaenergy.com'
+        link: 'https://sekomaenergy.com',
+        logo: '/images/clients/sekoma.png',
+        thumbnail: null
     },
     {
-        title: 'African Aesthetics Spa (AASPA)',
-        category: 'website',
-        thumbnail: '/images/portfolio/aaspa.jpg',
-        description: 'Beauty, wellness, and aesthetics destination site with a refined editorial feel — designed to drive bookings and showcase the spa experience.',
+        title: 'African Aesthetics Spa',
+        category: 'Website',
+        result: 'A refined booking destination for a wellness brand.',
+        description:
+            'Beauty, wellness, and aesthetics site with an editorial feel, designed to drive bookings and showcase the spa experience.',
         tags: ['Wellness', 'Hospitality', 'Bookings'],
-        link: 'https://africanaestheticsspa.com'
-    },
-    {
-        title: 'Mwezi Tech',
-        category: 'website',
-        thumbnail: '/images/portfolio/mwezi-tech.jpg',
-        description: 'Modern tech-services site positioning the brand as a forward-thinking digital partner across the African market.',
-        tags: ['Technology', 'Services'],
-        link: 'https://mwezitech.com/'
-    },
-    {
-        title: 'Annchota Legal Practitioners',
-        category: 'website',
-        thumbnail: '/images/portfolio/annchota-legal.jpg',
-        description: 'Professional, trust-first website for a Zambian legal practice — built to convert enquiries and signal authority across practice areas.',
-        tags: ['Legal', 'Professional Services'],
-        link: 'https://annchotalegalpractitioners.com/'
+        link: 'https://africanaestheticsspa.com',
+        logo: '/images/clients/aaspa.png',
+        thumbnail: null
     },
     {
         title: 'Flamingo Consultancy',
-        category: 'website',
-        thumbnail: '/images/portfolio/flamingo-consultancy.jpg',
-        description: 'Bold, branded consulting site that turns first-time visitors into leads — anchored around the Flamingo Consultancy identity.',
+        category: 'Website',
+        result: 'Turns first-time visitors into qualified leads.',
+        description:
+            'Bold, branded consulting site anchored around the Flamingo Consultancy identity and built for lead generation.',
         tags: ['Consulting', 'Lead Generation'],
-        link: 'https://www.consultingflamingo.com/'
-    },
-
-    // LOGOS & BRANDING
-    // TODO: Replace placeholder branding entries with real work
-    {
-        title: 'Brand Name 1',
-        category: 'branding',
-        thumbnail: '/images/portfolio/brand-1.jpg',
-        description: '[Description of the branding work done]',
-        tags: ['[Tag1]', '[Tag2]'],
-        link: null
+        link: 'https://www.consultingflamingo.com/',
+        logo: '/images/clients/flamingo-consultancy.png',
+        thumbnail: null
     },
     {
-        title: 'Brand Name 2',
-        category: 'branding',
-        thumbnail: '/images/portfolio/brand-2.jpg',
-        description: '[Description]',
-        tags: ['[Tag1]'],
-        link: null
-    },
-
-    // FLYERS & PRINT
-    // TODO: Replace placeholder flyer entries with real work
-    {
-        title: 'Flyer Project 1',
-        category: 'flyer',
-        thumbnail: '/images/portfolio/flyer-1.jpg',
-        description: '[Description]',
-        tags: ['[Tag1]'],
-        link: null
+        title: 'Mwezi Tech',
+        category: 'Website',
+        result: 'Positions the brand as a forward-thinking partner.',
+        description:
+            'Modern tech-services site positioning the brand as a forward-thinking digital partner across the African market.',
+        tags: ['Technology', 'Services'],
+        link: 'https://mwezitech.com/',
+        logo: null,
+        thumbnail: null
     },
     {
-        title: 'Flyer Project 2',
-        category: 'flyer',
-        thumbnail: '/images/portfolio/flyer-2.jpg',
-        description: '[Description]',
-        tags: ['[Tag1]'],
-        link: null
+        title: 'Annchota Legal Practitioners',
+        category: 'Website',
+        result: 'Signals authority and converts enquiries.',
+        description:
+            'Professional, trust-first site for a Zambian legal practice, built to convert enquiries across practice areas.',
+        tags: ['Legal', 'Professional Services'],
+        link: 'https://annchotalegalpractitioners.com/',
+        logo: null,
+        thumbnail: null
     }
 ];
-
-export const portfolioFilters = [
-    { id: 'all',      label: 'All' },
-    { id: 'website',  label: 'Websites' },
-    { id: 'branding', label: 'Logos & Branding' },
-    { id: 'flyer',    label: 'Flyers & Print' }
-];
-
-export const categoryLabels = {
-    website:  'Website',
-    branding: 'Logos & Branding',
-    flyer:    'Flyers & Print'
-};

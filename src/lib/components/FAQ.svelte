@@ -4,24 +4,24 @@
 
     const faqs = [
         {
+            q: 'How does a project come together?',
+            a: 'We start with your problem, not a template. Once we understand the goal, we shape the design and the build around it, and keep you in the loop at every step.'
+        },
+        {
             q: 'Do you work with small businesses and startups?',
-            a: 'Absolutely. Most of our clients are Zambian SMEs. We offer phased delivery and flexible payment structures to make quality digital work accessible.'
+            a: 'Yes. Most of our clients are Zambian SMEs. We offer phased delivery and flexible payment structures so quality digital work stays within reach.'
         },
         {
-            q: 'How long does a project typically take?',
-            a: "A business website usually takes 2–4 weeks. Custom web apps and brand identities vary by scope — we'll give you a clear timeline after your discovery conversation."
+            q: 'Does it work on every device?',
+            a: 'Every build is responsive and tested across phones, tablets, and desktops. We also respect reduced-motion settings so the site stays comfortable for everyone.'
         },
         {
-            q: 'Can I pay in installments?',
-            a: "Yes. We structure most projects with a deposit to begin, a midpoint payment, and a final payment on delivery. We'll agree the structure upfront."
+            q: 'What does working with Strata Forge cost?',
+            a: 'Every project is quoted to the brief, with no boilerplate packages. Tell us what you need and we reply with an honest assessment, not a one-size-fits-all price.'
         },
         {
-            q: 'Do you work with clients outside Lusaka?',
-            a: 'Yes — we work remotely with clients across Zambia and the region. All coordination happens via WhatsApp and video call.'
-        },
-        {
-            q: 'What do I need to get started?',
-            a: "Just a WhatsApp conversation. We'll ask a few questions, understand what you need, and send you a clear proposal within 48 hours."
+            q: 'How do we get started?',
+            a: 'Just a WhatsApp conversation. We ask a few questions, understand what you need, and send a clear proposal within 48 hours.'
         }
     ];
 
@@ -32,15 +32,15 @@
     }
 </script>
 
-<section class="faq">
+<section id="faq" class="faq">
     <div class="container fade-up-element" use:inView>
-        <div class="text-center mb-6">
-            <h2 class="section-title">Frequently asked</h2>
-            <p class="faq-subtitle">Everything you need to know before we start.</p>
+        <div class="section-head mb-6">
+            <p class="section-label"><span class="num">07</span> · FAQ</p>
+            <h2 class="section-headline">Clarity, <span class="wrap">up front.</span></h2>
         </div>
 
         <ul class="faq-list">
-            {#each faqs as item, i}
+            {#each faqs as item, i (item.q)}
                 <li class="faq-item" class:open={openIndex === i}>
                     <button
                         class="faq-question"
@@ -73,12 +73,13 @@
 
 <style>
     .faq {
-        padding: 80px 24px;
+        padding: 72px 20px;
     }
 
-    .faq-subtitle {
-        color: var(--color-text-muted);
-        font-size: 1.05rem;
+    .section-head {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .faq-list {
@@ -89,11 +90,11 @@
     }
 
     .faq-item {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid var(--border);
     }
 
     .faq-item:first-child {
-        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        border-top: 1px solid var(--border);
     }
 
     .faq-question {
@@ -104,26 +105,26 @@
         font: inherit;
         font-weight: 600;
         font-size: 1.05rem;
-        color: var(--color-text-main);
+        color: var(--text);
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 16px;
         text-align: left;
-        transition: color 0.2s ease;
+        transition: color 0.2s var(--ease-out);
     }
 
     .faq-question:hover {
-        color: var(--color-primary);
+        color: var(--orange);
     }
 
     .chev {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        color: var(--color-primary);
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        color: var(--orange);
+        transition: transform 0.3s var(--ease-out);
         flex-shrink: 0;
     }
 
@@ -148,7 +149,7 @@
     .faq-answer p {
         padding: 0 4px 22px;
         margin: 0;
-        color: var(--color-text-muted);
+        color: var(--text-muted);
         line-height: 1.7;
         font-size: 0.98rem;
     }
