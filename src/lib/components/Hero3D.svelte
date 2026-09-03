@@ -153,7 +153,7 @@
     <div class="glow"></div>
     <!-- Static poster frame: always rendered, hidden once the live scene is up. -->
     <div class="poster" class:hidden={ready && !failed}>
-        <img src="/assets/logo-mark.png" alt="" class="poster-mark" />
+        <img src="/assets/logo-mark-white.svg" alt="" class="poster-mark" />
     </div>
     <canvas bind:this={canvas} class="scene" class:visible={ready && !failed}></canvas>
 </div>
