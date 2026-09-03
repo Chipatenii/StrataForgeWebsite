@@ -26,7 +26,7 @@
 <header class="sticky-header" class:scrolled>
     <nav class="container nav-bar">
         <a href="/" class="logo-container" onclick={closeMenu}>
-            <img src="/images/logo-full.png" alt="Strata Forge Technologies" class="logo" />
+            <img src="/images/logo-white.svg" alt="Strata Forge Technologies" class="logo" />
         </a>
 
         <div class="menu-desktop">

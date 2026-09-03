@@ -10,7 +10,7 @@
 <footer class="footer">
     <div class="container footer-grid">
         <div class="footer-brand">
-            <img src="/images/logo-full.png" alt="Strata Forge Technologies" class="footer-logo" />
+            <img src="/images/logo-white.svg" alt="Strata Forge Technologies" class="footer-logo" />
             <p class="footer-tagline">Simple solutions for everyday business problems. Systems, design, and growth under one roof.</p>
             <div class="footer-socials">
                 <a href="https://www.facebook.com/strataforgetechnologies/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
