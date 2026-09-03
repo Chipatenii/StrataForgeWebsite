@@ -226,14 +226,26 @@
         </div>
         <div class="studio-aside fade-up-element delay-200" use:inView>
             <div class="founder">
-                <img class="founder-photo" src="/images/innocent_manda.jpeg" alt="Innocent Manda" loading="lazy" />
-                <div class="founder-meta">
-                    <p class="founder-name">Innocent Manda</p>
-                    <p class="founder-role">Founder &amp; Backend Architect</p>
-                    <a class="founder-link" href="https://www.linkedin.com/in/innocent-manda-80b48b187/" target="_blank" rel="noopener noreferrer">
-                        Connect on LinkedIn <ArrowUpRight size={14} />
-                    </a>
+                <div class="founder-head">
+                    <img class="founder-photo" src="/images/innocent_manda.jpeg" alt="Innocent Manda" loading="lazy" />
+                    <div class="founder-meta">
+                        <p class="founder-name">Innocent Manda</p>
+                        <p class="founder-role">Founder &amp; Backend Architect</p>
+                    </div>
                 </div>
+                <p class="founder-bio">
+                    I have spent the last several years building software systems, digital
+                    infrastructure, and growth-driven solutions for ambitious businesses in Zambia
+                    and beyond. My journey started with a passion for design and technology, but
+                    evolved into a deeper mission: helping companies transform ideas into scalable
+                    engines of success. As the founder of Strata Forge Technologies, I focus on
+                    backend architecture, automation, and modern digital solutions that strengthen
+                    how businesses operate and grow. I believe strong companies are forged through
+                    bold vision, reliable systems, and relentless execution.
+                </p>
+                <a class="founder-link" href="https://www.linkedin.com/in/innocent-manda-80b48b187/" target="_blank" rel="noopener noreferrer">
+                    Connect on LinkedIn <ArrowUpRight size={14} />
+                </a>
             </div>
             <div class="tools">
                 <p class="tools-label">Tools we build with</p>
@@ -704,17 +716,23 @@
 
     .founder {
         display: flex;
-        align-items: center;
-        gap: 18px;
-        padding: 22px;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
         border: 1px solid var(--border);
         border-radius: var(--radius-lg);
         background: var(--surface);
     }
 
+    .founder-head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
     .founder-photo {
-        width: 68px;
-        height: 68px;
+        width: 64px;
+        height: 64px;
         border-radius: var(--radius-md);
         object-fit: cover;
         flex-shrink: 0;
@@ -725,7 +743,12 @@
     .founder-role {
         color: var(--text-muted);
         font-size: 0.9rem;
-        margin-bottom: 6px;
+    }
+
+    .founder-bio {
+        color: var(--text-muted);
+        font-size: 0.94rem;
+        line-height: 1.7;
     }
 
     .founder-link {
@@ -737,6 +760,8 @@
         font-size: 0.86rem;
         text-decoration: none;
     }
+
+    .founder-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     /* --- 06 Process --- */
     .process-grid {
